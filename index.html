@@ -49,9 +49,12 @@
         var timer = null;
         var  val = 20;
         setTimeout(function(){
+            document.querySelector(".wordbox").style.display = "block";
+        },2000);
+        setTimeout(function(){
             document.querySelector(".hand").style.display = "block";
             zhiwen.style.display = "block";
-        },17000);
+        },19000);
         zhiwen.addEventListener('touchstart',function(){ 
             document.querySelector(".scan").style.display = "block";
             document.querySelector(".hand").className = "hand"+" "+'movehand'; 
