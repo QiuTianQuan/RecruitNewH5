@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>招贤纳士</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />  
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <main>
+        <div class="senseOne">
+            <div class="wordbox">
+                <div class="words">
+                    <div class="word word1">
+                        <img src="imgs/word1.png">
+                    </div>
+                    <div class="word word2">
+                         <img src="imgs/word2.png">
+                    </div>
+                    <div class="word word3">
+                         <img src="imgs/word3.png">
+                    </div>
+                    <div class="word word4">
+                         <img src="imgs/word4.png">
+                    </div>
+                    <div class="word word5">
+                         <img src="imgs/word5.png">
+                    </div>
+                    <div class="word word6">
+                         <img src="imgs/word6.png">
+                    </div>
+                    <div class="word word7">
+                         <img src="imgs/word7.png">
+                    </div>
+                    <div class="word word8">
+                         <img src="imgs/word8.png">
+                    </div>
+                </div>
+                <div class="zhiwen">
+                    <div class="scan"></div>
+                </div>
+                <div class="hand"></div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">  
+        var zhiwen = document.querySelector(".zhiwen");
+        var timer = null;
+        var  val = 20;
+        setTimeout(function(){
+            document.querySelector(".hand").style.display = "block";
+            zhiwen.style.display = "block";
+        },17000);
+        zhiwen.addEventListener('touchstart',function(){ 
+            document.querySelector(".scan").style.display = "block";
+            document.querySelector(".hand").className = "hand"+" "+'movehand'; 
+
+        });   
+
+        zhiwen.ontouchstart = function(){
+            plus();
+        };
+        zhiwen.ontouchend = function(){
+            clearTimeout(timer);
+        };
+        function plus(){
+            setInterval(function(){
+                if (val<=100) {
+                    zhiwen.style.opacity=val/100;
+                    val++;
+                }
+            },200);
+            timer = setTimeout(function(){
+                plus();
+            }, 500);
+        }
+    </script>
+</body>
+</html>
