@@ -1,3 +1,8 @@
+body {
+    -webkit-touch-callout: none !important;
+    margin: 0;
+}
+
 .senseOne {
     width: 100vw;
     height: 100vh;
@@ -44,6 +49,7 @@
     overflow: hidden;
     display: none;
     opacity: 0.2;
+    -webkit-user-select: none;
 }
 
 .word1 {
@@ -164,6 +170,7 @@
     height: 12.5vh;
     margin-top: -1.5vh;
     margin-left: 55vw;
+    -webkit-user-select: none;
 }
 
 .scan {
