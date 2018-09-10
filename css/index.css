@@ -28,7 +28,7 @@ body {
 .arrowbox {
     top: 75vw;
     width: 40vw;
-    height: 30vw;
+    height: 50vw;
     position: absolute;
     left: 0;
     right: 0;
@@ -38,7 +38,7 @@ body {
 
 .arrow {
     width: 20%;
-    height: 50%;
+    height: 35%;
     margin-left: 5vw;
     animation: float 1s;
     -moz-animation: float 1s; /* Firefox */
@@ -69,7 +69,7 @@ body {
 .wordbox {
     display: none;
     margin: 0 auto;
-    margin-top: 43vw;
+    margin-top: 40vw;
     width: 75%;
     height: 110vw;
     background: url(../imgs/wordbox.png) center center;
