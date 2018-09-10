@@ -9,6 +9,10 @@
 <body>
     <main>
         <div class="senseOne">
+            <div class="arrowbox">
+                    <img class="arrow" src="imgs/arrow.png">
+                </div>
+            <div class="mask"></div>
             <div class="wordbox">
                 <div class="words">
                     <div class="word word1">
@@ -44,13 +48,28 @@
         </div>
     </main>
 
-    <script type="text/javascript">  
+    <script type="text/javascript"> 
+        var arrowbox = document.querySelector(".arrowbox");
+        var mask = document.querySelector(".mask");
+        var arrowpoa = 100 ;
+        arrowbox.addEventListener('touchstart',function(){ 
+            arrowbox.style.display = "none";
+             setInterval(function(){
+                if (arrowpoa >= 1) {
+                    mask.style.opacity=arrowpoa/100;
+                    arrowpoa--;
+                    if ( arrowpoa == 1) 
+                    {
+                        document.querySelector(".senseOne").removeChild(mask);
+                        document.querySelector(".wordbox").style.display = "block";
+                    }
+                }
+            },10);
+        });   
+        console.log(arrowpoa);
         var zhiwen = document.querySelector(".zhiwen");
         var timer = null;
-        var  val = 20;
-        setTimeout(function(){
-            document.querySelector(".wordbox").style.display = "block";
-        },2000);
+        var  zhiwenopa = 20;
         setTimeout(function(){
             document.querySelector(".hand").style.display = "block";
             zhiwen.style.display = "block";
@@ -69,9 +88,9 @@
         };
         function plus(){
             setInterval(function(){
-                if (val<=100) {
-                    zhiwen.style.opacity=val/100;
-                    val++;
+                if (zhiwenopa<=100) {
+                    zhiwen.style.opacity=zhiwenopa/100;
+                    zhiwenopa++;
                 }
             },200);
             timer = setTimeout(function(){

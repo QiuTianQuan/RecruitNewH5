@@ -10,17 +10,69 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
+    background-position-y: bottom; 
 }
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../imgs/mask.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: bottom; 
+}
+
+.arrowbox {
+    top: 85vw;
+    width: 40vw;
+    height: 30vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;   
+    z-index: 99;
+}
+
+.arrow {
+    width: 20%;
+    height: 50%;
+    margin-left: 5vw;
+    animation: float 1s;
+    -moz-animation: float 1s; /* Firefox */
+    -webkit-animation: float 1s;  /* Safari 和 Chrome */
+    -o-animation: float 1s;   /* Opera */
+    -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes float /* Safari 和 Chrome */
+{
+    from {  margin-top: 0;}
+    to { margin-top: 6vw; }
+}
+
+/*.aperture {
+    border-radius: 50px;
+    width: 50vw;
+    height: 50vw;
+    box-shadow: 0 0 10px white;
+    border-left-width: 30vw;
+    border-top-width: 100vw;
+    border-right-width: 50vw;
+    border-bottom-width: 80vw;
+}*/
 
 .wordbox {
     display: none;
-    position: absolute;
+    margin: 0 auto;
+    margin-top: 43vw;
     width: 75%;
-    height: 60%;
-    left: 50%;
-    top: 53%;
-    transform: translate(-50%,-50%);
-    background-image: url(../imgs/wordbox.png);
+    height: 110vw;
+    background: url(../imgs/wordbox.png) center center;
     background-size: contain;
     background-repeat: no-repeat;
     animation: boxshow 2s;
@@ -37,7 +89,8 @@ body {
 }
 
 .words{
-    margin-top: 6vh;
+    margin-top: 12.5vw;
+    display: inline-block;
 }
 
 .word {
@@ -47,16 +100,16 @@ body {
 }
 
 .word img {
-    height: 2.5vh;
+    height: 4.5vw;
 }
 
 .zhiwen {
     width: 25%;
     margin: 0 auto;
-    background-image: url(../imgs/zhiwen.png);
+    background: url(../imgs/zhiwen.png) center center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 11.5vh;
+    height: 25vw;
     margin-top: 2vh;
     overflow: hidden;
     display: none;
@@ -185,8 +238,8 @@ body {
     background-image: url(../imgs/hand.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 15vh;
-    margin-top: -1.5vh;
+    height: 25vw;
+    margin-top: -5vw;
     margin-left: 55vw;
     -webkit-user-select: none;
 }
@@ -206,7 +259,7 @@ body {
 @-webkit-keyframes scanshow /* Safari 和 Chrome */
 {
     from {margin-top: 0; opacity :0.8;}
-    to { margin-top: 10.5vh; opacity :1; }
+    to { margin-top: 25vw;; opacity :1; }
 }
 
 .movehand {
@@ -219,6 +272,6 @@ body {
 
 @-webkit-keyframes handmove /* Safari 和 Chrome */
 {
-    from {margin-top: -1.5vh;margin-left: 55vw;}
-    to {margin-top: -4.5vh;margin-left: 40vw;}
+    from {margin-top: -5vw;margin-left: 55vw;}
+    to {margin-top: -10.5vw;margin-left: 43vw;}
 }
