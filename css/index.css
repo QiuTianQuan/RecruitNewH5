@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    background-position-y: bottom; 
+    background-position-y: bottom;
 }
 
 .mask {
@@ -22,7 +22,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: bottom; 
+    background-position-y: bottom;
 }
 
 .arrowbox {
@@ -32,7 +32,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    margin: auto;   
+    margin: auto;
     z-index: 99;
 }
 
@@ -41,19 +41,29 @@ body {
     height: 35%;
     margin-left: 5vw;
     animation: float 1s;
-    -moz-animation: float 1s; /* Firefox */
-    -webkit-animation: float 1s;  /* Safari 和 Chrome */
-    -o-animation: float 1s;   /* Opera */
+    -moz-animation: float 1s;
+    /* Firefox */
+    -webkit-animation: float 1s;
+    /* Safari 和 Chrome */
+    -o-animation: float 1s;
+    /* Opera */
     -webkit-animation-direction: alternate;
     animation-iteration-count: infinite;
 }
 
 
-@-webkit-keyframes float /* Safari 和 Chrome */
+@-webkit-keyframes float
+/* Safari 和 Chrome */
+
 {
-    from {  margin-top: 0;}
-    to { margin-top: 6vw; }
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 6vw;
+    }
 }
+
 
 /*.aperture {
     border-radius: 50px;
@@ -69,26 +79,35 @@ body {
 .wordbox {
     display: none;
     margin: 0 auto;
-    margin-top: 30vw;
+    margin-top: 22vw;
     width: 75%;
     height: 110vw;
     background: url(../imgs/wordbox.png) center center;
     background-size: contain;
     background-repeat: no-repeat;
     animation: boxshow 2s;
-    -moz-animation: boxshow 2s; /* Firefox */
-    -webkit-animation: boxshow 2s;  /* Safari 和 Chrome */
-    -o-animation: boxshow 2s;   /* Opera */
+    -moz-animation: boxshow 2s;
+    /* Firefox */
+    -webkit-animation: boxshow 2s;
+    /* Safari 和 Chrome */
+    -o-animation: boxshow 2s;
+    /* Opera */
 }
 
 
-@-webkit-keyframes boxshow /* Safari 和 Chrome */
+@-webkit-keyframes boxshow
+/* Safari 和 Chrome */
+
 {
-    from { opacity :0; }
-    to { opacity :1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.words{
+.words {
     margin-top: 12.5vw;
     display: inline-block;
 }
@@ -103,17 +122,50 @@ body {
     height: 4.5vw;
 }
 
-.zhiwen {
-    width: 25%;
+.scanbox {
+    width: 35%;
     margin: 0 auto;
-    background: url(../imgs/zhiwen.png) center center;
+    background: url(../imgs/scanbox.png) center center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 25vw;
-    margin-top: 2vh;
+    margin-top: 4vw;
     overflow: hidden;
     display: none;
-    opacity: 0.2;
+}
+
+.boxs {
+    animation: boxstar 1s;
+    -moz-animation: boxstar 1s;
+    /* Firefox */
+    -webkit-animation: boxstar 1s;
+    /* Safari 和 Chrome */
+    -o-animation: boxstar 1s;
+    /* Opera */
+    -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes boxstar
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.zhiwen {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 2vw;
+    overflow: hidden;
+    opacity: 0.15;
     -webkit-user-select: none;
 }
 
@@ -121,111 +173,143 @@ body {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 2s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 2s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 2s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 2s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word2 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 4s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 4s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 4s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 4s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word3 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 6s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 6s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 6s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 6s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word4 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 8s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 8s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 8s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 8s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word5 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 10s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 10s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 10s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 10s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word6 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 12s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 12s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 12s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 12s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word7 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 14s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 14s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 14s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 14s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .word8 {
     opacity: 0;
     animation: upto 2s;
     animation-delay: 16s;
-    -moz-animation: upto 2s; /* Firefox */
+    -moz-animation: upto 2s;
+    /* Firefox */
     -moz-animation-delay: 16s;
-    -webkit-animation: upto 2s;  /* Safari 和 Chrome */
+    -webkit-animation: upto 2s;
+    /* Safari 和 Chrome */
     -webkit-animation-delay: 16s;
-    -o-animation: upto 2s;   /* Opera */
+    -o-animation: upto 2s;
+    /* Opera */
     -o-animation-delay: 16s;
-    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 
-@-webkit-keyframes upto /* Safari 和 Chrome */
+@-webkit-keyframes upto
+/* Safari 和 Chrome */
+
 {
-    from { padding-top: 2vh;opacity :0; }
-    to { padding-top: 0;opacity :1; }
+    from {
+        padding-top: 2vh;
+        opacity: 0;
+    }
+    to {
+        padding-top: 0;
+        opacity: 1;
+    }
 }
 
 
@@ -249,29 +333,52 @@ body {
     border: solid 1px white;
     width: 100%;
     animation: scanshow 1s;
-    -moz-animation: scanshow 1s; /* Firefox */
-    -webkit-animation: scanshow 1s;  /* Safari 和 Chrome */
-    -o-animation: scanshow 1s;   /* Opera */
+    -moz-animation: scanshow 1s;
+    /* Firefox */
+    -webkit-animation: scanshow 1s;
+    /* Safari 和 Chrome */
+    -o-animation: scanshow 1s;
+    /* Opera */
     -webkit-animation-direction: alternate;
     animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes scanshow /* Safari 和 Chrome */
+@-webkit-keyframes scanshow
+/* Safari 和 Chrome */
+
 {
-    from {margin-top: 0; opacity :0.8;}
-    to { margin-top: 25vw;; opacity :1; }
+    from {
+        margin-top: 0;
+        opacity: 0.5;
+    }
+    to {
+        margin-top: -21vw;
+        ;
+        opacity: 1;
+    }
 }
 
 .movehand {
     animation: handmove 2s;
-    -moz-animation: handmove 2s; /* Firefox */
-    -webkit-animation: handmove 2s;  /* Safari 和 Chrome */
-    -o-animation: handmove 2s;   /* Opera */
-    -webkit-animation-fill-mode:forwards;
+    -moz-animation: handmove 2s;
+    /* Firefox */
+    -webkit-animation: handmove 2s;
+    /* Safari 和 Chrome */
+    -o-animation: handmove 2s;
+    /* Opera */
+    -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes handmove /* Safari 和 Chrome */
+@-webkit-keyframes handmove
+/* Safari 和 Chrome */
+
 {
-    from {margin-top: -5vw;margin-left: 55vw;}
-    to {margin-top: -10.5vw;margin-left: 43vw;}
+    from {
+        margin-top: -5vw;
+        margin-left: 55vw;
+    }
+    to {
+        margin-top: -10.5vw;
+        margin-left: 43vw;
+    }
 }
