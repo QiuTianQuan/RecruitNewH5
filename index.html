@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-
 <head>
     <title>招贤纳士</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/three.min.js"></script>z
 </head>
 
 <body>
@@ -49,6 +49,15 @@
                 <div class="hand"></div>
             </div>
         </div>
+        <div class="senseTwo">
+            <div class="mask2"></div>
+            <div class="departRotate">
+                <div class="rotatebox"></div>
+                <div class="departlog">
+                    <div class="sre"></div>
+                </div>
+            </div>
+        </div>
     </main>
     <script type="text/javascript">
     var arrowbox = document.querySelector(".arrowbox");
@@ -71,7 +80,7 @@
     var zhiwen = document.querySelector(".zhiwen");
     var timer = null;
     var zhiwenopa = 20;
-    
+
     function zhiwenshow() {
         setTimeout(function() {
             document.querySelector(".hand").style.display = "block";
@@ -104,6 +113,92 @@
         }, 500);
     }
     </script>
+    <script type="text/javascript">
+    function init() {
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        renderer = new THREE.WebGLRenderer();
+        renderer.setPixelRatio(window.devicePixelRatio); //设置设备像素比。通常用于HiDPI设备防止模糊输出canvas。
+        renderer.setSize(document.documentElement.clientWidth, document.documentElement.clientHeight);
+        document.body.appendChild(renderer.domElement);
+        renderer.setClearColor(0xFFFFFF, 1.0);
+
+
+        scene = new THREE.Scene(); //创建场景
+
+        camera = new THREE.PerspectiveCamera(150, window.innerWidth/window.innerHeight, 0.1, 1000); //透视投影照相机
+        camera.position.set(20, 40, 80
+        ); //相机位置
+        // camera.lookAt(new THREE.Vector3(0, 0, 0));
+        //lookAt()设置相机所看的位置
+        scene.add(camera); //把相机添加到场景中
+
+
+        //地板
+        var loader = new THREE.TextureLoader();
+        loader.load("http://118.126.89.153/RecruitNewH5/imgs/bgimg.jpg", function(texture) {
+            var geometry = new THREE.BoxGeometry(w, h, 1);
+            var material = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, map: texture });
+            mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+        })
+    }
+
+    function render() {
+        requestAnimationFrame(render);
+        renderer.render(scene, camera);
+    }
+
+    function threeStart() {
+        init();
+        render();
+    }
+    
+    window.onload = threeStart();
+    </script>
 </body>
 
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>three.js css3d - panorama</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            cursor: move;
+            overflow: hidden;
+        }
+        .surface { width: 1026px; height: 1026px; background-size: cover; position: absolute; }
+        .surface .bg { position: absolute; width: 1026px; height: 1026px; }
+    </style>
+</head>
+<body>
+<div>
+    <div id="surface_0" class="surface">
+        <img class="bg" src="imgs/bg2.jpg" alt="">
+    </div>
+    <div id="surface_1" class="surface">
+        <img class="bg" src="imgs/bg2.jpg" alt="">
+    </div>
+    <div id="surface_2" class="surface">
+        <img class="bg" src="imgs/bg2.jpg" alt="">
+    </div>
+    <div id="surface_3" class="surface">
+        <img class="bg" src="imgs/bg2.jpg" alt="">
+    </div>
+    <div id="surface_4" class="surface">
+        <img class="bg" src="imgs/bg2.jpg" alt="">
+    </div>
+    <div id="surface_5" class="surface">
+        <img class="bg" src="imgs/bg2.jpg" alt="">
+    </div>
+</div>
+<script src="js/three.min.js"></script>
+<script src="js/CSS3DRenderer.min.js"></script>
+<script src="js/index.js"></script>
+</body>
 </html>

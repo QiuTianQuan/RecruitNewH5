@@ -4,9 +4,13 @@ body {
 }
 
 .senseOne {
+    display: none;
+    background-image: url(../imgs/bgimg.jpg);
+}
+
+.senseOne,.senseTwo,.mask,.mask2 {
     width: 100vw;
     height: 100vh;
-    background-image: url(../imgs/bgimg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -15,14 +19,7 @@ body {
 }
 
 .mask {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-image: url(../imgs/mask.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    background-position-y: bottom;
+     background-image: url(../imgs/mask.png);
 }
 
 .arrowbox {
@@ -382,3 +379,16 @@ body {
         margin-left: 43vw;
     }
 }
+
+.senseTwo {
+    display: none;
+    background-image: url(../imgs/bgimg2.jpg);
+}
+
+.mask2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/mask2.png);
+}
+
