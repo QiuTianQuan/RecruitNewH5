@@ -24,7 +24,7 @@ function zhiwenshow() {
     setTimeout(function() {
         document.querySelector(".hand").style.display = "block";
         document.querySelector(".scanbox").style.display = "block";
-    }, 18000);
+    }, 14500);
 }
 zhiwen.addEventListener('touchstart', function() {
     document.querySelector(".scanbox").classList.remove("boxs");
@@ -48,9 +48,8 @@ function plus() {
             if (zhiwenopa == 100) {
                 document.querySelector(".senseOne").style.display = "none";
                 document.querySelector(".senseTwo").style.display = "block";
-                document.querySelector("canvas").style.display = "block";
+                // document.querySelector("canvas").style.display = "block";
                 logleave();
-                big();
 
             }
         }
@@ -66,14 +65,14 @@ function logleave() {
         document.querySelector(".depart").style.display = "none";
         fast = true;
         document.querySelector(".people").className = "people" + " " + 'bigpeople';
-    }, 11000);
+    }, 12000);
 }
 
-function big() {
-  setTimeout(function() {
-        document.querySelector(".bigbigpeople").style.display = "block";
-    }, 15000);
-}
+// function big() {
+//   setTimeout(function() {
+//         document.querySelector(".bigbigpeople").style.display = "block";
+//     }, 15000);
+// }
 
 //three.js
 var vertexHeight = 10000;
