@@ -410,7 +410,7 @@ body {
     -webkit-animation-fill-mode: forwards;
 }
 
-.sre {
+.chanpin {
     opacity: 0;
     animation: logshow 5s linear 6s;
     -moz-animation: logshow 5s linear 6s;
@@ -418,6 +418,50 @@ body {
     -webkit-animation: logshow 5s linear 6s;
     /* Safari 和 Chrome */
     -o-animation: logshow 5s linear 6s;
+}
+
+.shijue {
+    opacity: 0;
+    animation: logshow 5s linear 11s;
+    -moz-animation: logshow 5s linear 11s;
+    /* Firefox */
+    -webkit-animation: logshow 5s linear 11s;
+    /* Safari 和 Chrome */
+    -o-animation: logshow 5s linear 11s;
+}
+
+
+.web {
+    opacity: 0;
+    animation: logshow 5s linear 16s;
+    -moz-animation: logshow 5s linear 16s;
+    /* Firefox */
+    -webkit-animation: logshow 5s linear 16s;
+    /* Safari 和 Chrome */
+    -o-animation: logshow 5s linear 16s;
+}
+
+
+
+
+.mobile {
+    opacity: 0;
+    animation: logshow 5s linear 21s;
+    -moz-animation: logshow 5s linear 21s;
+    /* Firefox */
+    -webkit-animation: logshow 5s linear 21s;
+    /* Safari 和 Chrome */
+    -o-animation: logshow 5s linear 21s;
+}
+
+.sre {
+    opacity: 0;
+    animation: logshow 5s linear 26s;
+    -moz-animation: logshow 5s linear 26s;
+    /* Firefox */
+    -webkit-animation: logshow 5s linear 26s;
+    /* Safari 和 Chrome */
+    -o-animation: logshow 5s linear 26s;
 }
 
 @-webkit-keyframes logshow
@@ -439,14 +483,17 @@ body {
     position: absolute;
     width: 100vw;
     z-index: 999;
-    top: 60vw;
+    top: 65vw;
 }
 
 .log {
+    width: 100%;
+    position: absolute;
     text-align: center;
 }
 
 .log img {
+    display: inline-block;
     width: 35%;
 }
 

@@ -30,15 +30,9 @@ zhiwen.addEventListener('touchstart', function() {
     document.querySelector(".scanbox").classList.remove("boxs");
     document.querySelector(".scan").style.display = "block";
     document.querySelector(".hand").className = "hand" + " " + 'movehand';
+    plus();
 
 });
-
-zhiwen.ontouchstart = function() {
-    plus();
-};
-zhiwen.ontouchend = function() {
-    clearTimeout(timer);
-};
 
 function plus() {
     setInterval(function() {
@@ -65,7 +59,7 @@ function logleave() {
         document.querySelector(".depart").style.display = "none";
         fast = true;
         document.querySelector(".people").className = "people" + " " + 'bigpeople';
-    }, 12000);
+    }, 32000);
 }
 
 // function big() {
@@ -154,7 +148,7 @@ render();
         camera.position.z -= 100;
       }
            uniforms.time.value = frame;
-        frame += .18;
+        frame += .88;
        //  dateVerts();
         renderer.render( scene, camera );
 			}
