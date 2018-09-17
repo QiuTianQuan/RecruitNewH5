@@ -396,6 +396,7 @@ canvas {
 .senseTwo {
     display: none;
     position: absolute;
+    height: 100vh;
 }
 
 .depart {
@@ -410,12 +411,12 @@ canvas {
     top: 0;
     left: 0;
     background-image: url(../imgs/mask2.png);
-    animation: boxshow 2s linear 1s;
-    -moz-animation: boxshow 2s linear 1s;
+    animation: boxshow 2s linear 2s;
+    -moz-animation: boxshow 2s linear 2s;
     /* Firefox */
-    -webkit-animation: boxshow 2s linear 1s;
+    -webkit-animation: boxshow 2s linear 2s;
     /* Safari 和 Chrome */
-    -o-animation: boxshow 2s linear 1s;
+    -o-animation: boxshow 2s linear 2s;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -464,12 +465,12 @@ canvas {
 
 .sre {
     opacity: 0;
-    animation: logshow 3s linear 6s;
-    -moz-animation: logshow 3s linear 6s;
+    animation: logshow 5s linear 6s;
+    -moz-animation: logshow 5s linear 6s;
     /* Firefox */
-    -webkit-animation: logshow 3s linear 6s;
+    -webkit-animation: logshow 5s linear 6s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 3s linear 6s;
+    -o-animation: logshow 5s linear 6s;
 }
 
 @-webkit-keyframes logshow

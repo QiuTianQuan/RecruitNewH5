@@ -1,6 +1,6 @@
-var vertexHeight = 105000;
+var vertexHeight = 10000;
 var planeDefinition = 200;
-var planeSize = 1345000;
+var planeSize = 945000;
 var totalObjects = 100000;
 var frame = 0;
 
