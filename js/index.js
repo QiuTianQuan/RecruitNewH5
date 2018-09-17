@@ -1,7 +1,7 @@
 var vertexHeight = 105000;
 var planeDefinition = 200;
 var planeSize = 1345000;
-var totalObjects = 80000;
+var totalObjects = 100000;
 var frame = 0;
 
 var container = document.createElement('div');
@@ -48,7 +48,7 @@ for (i = 0; i < totalObjects; i ++)
   geometry.vertices.push( vertex );
 }
 
-var material = new THREE.ParticleBasicMaterial( { size: 200 });
+var material = new THREE.ParticleBasicMaterial( { size: 150 });
 var particles = new THREE.ParticleSystem( geometry, material );
 	 
 scene.add( particles ); 
