@@ -1,25 +1,36 @@
 body {
     -webkit-touch-callout: none !important;
     margin: 0;
+    background-color: #000000;
+    overflow: hidden;
+    background-image: radial-gradient(ellipse farthest-corner at center top, #23233f 0%, #000000 60%);
 }
 
 .senseOne {
-    display: none;
+    display: block;
     background-image: url(../imgs/bgimg.jpg);
+    position: absolute;
+    top: 0;
 }
 
-.senseOne,.senseTwo,.mask,.mask2 {
+.senseOne,
+.senseTwo,
+.mask,
+.mask2 {
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
     overflow: hidden;
     background-position-y: bottom;
 }
 
+canvas {
+    display: none;
+}
+
 .mask {
-     background-image: url(../imgs/mask.png);
+    background-image: url(../imgs/mask.png);
 }
 
 .arrowbox {
@@ -60,6 +71,7 @@ body {
         margin-top: 6vw;
     }
 }
+
 
 
 /*.aperture {
@@ -328,7 +340,8 @@ body {
 .scan {
     display: none;
     border: solid 1px white;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     animation: scanshow 1s;
     -moz-animation: scanshow 1s;
     /* Firefox */
@@ -382,13 +395,121 @@ body {
 
 .senseTwo {
     display: none;
-    background-image: url(../imgs/bgimg2.jpg);
+    position: absolute;
+}
+
+.depart {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .mask2 {
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     background-image: url(../imgs/mask2.png);
+    animation: boxshow 2s linear 1s;
+    -moz-animation: boxshow 2s linear 1s;
+    /* Firefox */
+    -webkit-animation: boxshow 2s linear 1s;
+    /* Safari 和 Chrome */
+    -o-animation: boxshow 2s linear 1s;
+    -webkit-animation-fill-mode: forwards;
 }
 
+
+.cricle {
+    margin-top: 50vw;
+    width: 100vw;
+    text-align: center;
+    z-index: 888;
+    animation: rotate 2s linear ;
+    -moz-animation: rotate 2s linear ;
+    /* Firefox */
+    -webkit-animation: rotate 2s linear ;
+    /* Safari 和 Chrome */
+    -o-animation: rotate 2s linear ;
+    /* Opera */
+     animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotate
+/* Safari 和 Chrome */
+
+{
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.cricle img {
+    width: 60%;
+}
+
+.depart {
+    opacity: 0;
+    animation: boxshow 2s linear 5s;
+    -moz-animation: boxshow 2s linear 5s;
+    /* Firefox */
+    -webkit-animation: boxshow 2s linear 5s;
+    /* Safari 和 Chrome */
+    -o-animation: boxshow 2s linear 5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.sre {
+    opacity: 0;
+    animation: logshow 3s linear 6s;
+    -moz-animation: logshow 3s linear 6s;
+    /* Firefox */
+    -webkit-animation: logshow 3s linear 6s;
+    /* Safari 和 Chrome */
+    -o-animation: logshow 3s linear 6s;
+}
+
+@-webkit-keyframes logshow
+/* Safari 和 Chrome */
+
+{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.departlog {
+    position: absolute;
+    width: 100vw;
+    z-index: 999;
+    top: 60vw;
+}
+
+.log {
+    text-align: center;
+}
+
+.log img {
+    width: 35%;
+}
+
+
+.people {
+    margin-top: 60vw;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+}
+
+.people img {
+    width: 40%;
+}
