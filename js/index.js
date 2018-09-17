@@ -1,3 +1,81 @@
+var fast = false;
+var arrowbox = document.querySelector(".arrowbox");
+var mask = document.querySelector(".mask");
+var arrowpoa = 100;
+arrowbox.addEventListener('touchstart', function() {
+    arrowbox.style.display = "none";
+    setInterval(function() {
+        if (arrowpoa >= 1) {
+            mask.style.opacity = arrowpoa / 100;
+            arrowpoa--;
+            if (arrowpoa == 1) {
+                document.querySelector(".senseOne").removeChild(mask);
+                document.querySelector(".wordbox").style.display = "block";
+                zhiwenshow();
+            }
+        }
+    }, 20);
+});
+var zhiwen = document.querySelector(".zhiwen");
+var timer = null;
+var zhiwenopa = 20;
+
+function zhiwenshow() {
+    setTimeout(function() {
+        document.querySelector(".hand").style.display = "block";
+        document.querySelector(".scanbox").style.display = "block";
+    }, 18000);
+}
+zhiwen.addEventListener('touchstart', function() {
+    document.querySelector(".scanbox").classList.remove("boxs");
+    document.querySelector(".scan").style.display = "block";
+    document.querySelector(".hand").className = "hand" + " " + 'movehand';
+
+});
+
+zhiwen.ontouchstart = function() {
+    plus();
+};
+zhiwen.ontouchend = function() {
+    clearTimeout(timer);
+};
+
+function plus() {
+    setInterval(function() {
+        if (zhiwenopa <= 100) {
+            zhiwen.style.opacity = zhiwenopa / 100;
+            zhiwenopa++;
+            if (zhiwenopa == 100) {
+                document.querySelector(".senseOne").style.display = "none";
+                document.querySelector(".senseTwo").style.display = "block";
+                document.querySelector("canvas").style.display = "block";
+                logleave();
+                big();
+
+            }
+        }
+    }, 100);
+    timer = setTimeout(function() {
+        plus();
+    }, 500);
+}
+
+function logleave() {
+    setTimeout(function() {
+        document.querySelector(".mask2").style.display = "none";
+        document.querySelector(".depart").style.display = "none";
+        fast = true;
+        document.querySelector(".people").className = "people" + " " + 'bigpeople';
+    }, 11000);
+}
+
+function big() {
+  setTimeout(function() {
+        document.querySelector(".bigbigpeople").style.display = "block";
+    }, 15000);
+}
+
+//three.js
 var vertexHeight = 10000;
 var planeDefinition = 200;
 var planeSize = 845000;
@@ -71,9 +149,13 @@ render();
 
 			function render() {
         requestAnimationFrame( render );
+        if (fast) {
+        camera.position.z -= 500;
+      }else{
         camera.position.z -= 100;
+      }
            uniforms.time.value = frame;
-        frame += .08;
+        frame += .18;
        //  dateVerts();
         renderer.render( scene, camera );
 			}

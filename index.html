@@ -52,6 +52,12 @@
         </div>
         <div class="senseTwo">
             <div class="bg2"></div>
+            <div class="star1">
+                <img src="imgs/star1.png">
+            </div>
+            <div class="star2">
+                <img src="imgs/star2.png">
+            </div>
             <div class="people">
                 <img src="imgs/people.png">
             </div>
@@ -66,67 +72,9 @@
                     </div>
                 </div>
             </div>
+            <div class="bigbigpeople"></div>
         </div>
     </main>
-    <script type="text/javascript">
-    var arrowbox = document.querySelector(".arrowbox");
-    var mask = document.querySelector(".mask");
-    var arrowpoa = 100;
-    arrowbox.addEventListener('touchstart', function() {
-        arrowbox.style.display = "none";
-        setInterval(function() {
-            if (arrowpoa >= 1) {
-                mask.style.opacity = arrowpoa / 100;
-                arrowpoa--;
-                if (arrowpoa == 1) {
-                    document.querySelector(".senseOne").removeChild(mask);
-                    document.querySelector(".wordbox").style.display = "block";
-                    zhiwenshow();
-                }
-            }
-        }, 20);
-    });
-    var zhiwen = document.querySelector(".zhiwen");
-    var timer = null;
-    var zhiwenopa = 20;
-
-    function zhiwenshow() {
-        setTimeout(function() {
-            document.querySelector(".hand").style.display = "block";
-            document.querySelector(".scanbox").style.display = "block";
-        }, 18000);
-    }
-    zhiwen.addEventListener('touchstart', function() {
-        document.querySelector(".scanbox").classList.remove("boxs");
-        document.querySelector(".scan").style.display = "block";
-        document.querySelector(".hand").className = "hand" + " " + 'movehand';
-
-    });
-
-    zhiwen.ontouchstart = function() {
-        plus();
-    };
-    zhiwen.ontouchend = function() {
-        clearTimeout(timer);
-    };
-
-    function plus() {
-        setInterval(function() {
-            if (zhiwenopa <= 100) {
-                zhiwen.style.opacity = zhiwenopa / 100;
-                zhiwenopa++;
-                if (zhiwenopa == 100) {
-                    document.querySelector(".senseOne").style.display = "none";
-                    document.querySelector(".senseTwo").style.display = "block";
-                    document.querySelector("canvas").style.display = "block";
-                }
-            }
-        }, 100);
-        timer = setTimeout(function() {
-            plus();
-        }, 500);
-    }
-    </script>
     <script id="vertexShader" type="x-shader/x-vertex">
         // Uniforms uniform float time; varying vec3 vNormal; void main(void) { vec3 v = position; vNormal = normal; v.z += cos(2.0 * position.x + (time)) * 4085.5; gl_Position = projectionMatrix * modelViewMatrix * vec4(v, 1.0); }
     </script>

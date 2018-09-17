@@ -17,7 +17,8 @@ body {
 .senseTwo,
 .mask,
 .mask2,
-.bg2 {
+.bg2,
+.bigbigpeople {
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -519,6 +520,114 @@ canvas {
     position: absolute;
 }
 
+.bigpeople{
+     animation: tobig 8s linear ;
+    -moz-animation: tobig 8s linear ;
+    /* Firefox */
+    -webkit-animation: tobig 8s linear ;
+    /* Safari 和 Chrome */
+    -o-animation: tobig 8s linear ;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.bigbigpeople {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/big.jpg);
+    animation: boxstar 4s linear ;
+    -moz-animation: boxstar 4s linear ;
+    /* Firefox */
+    -webkit-animation: boxstar 4s linear ;
+    /* Safari 和 Chrome */
+    -o-animation: boxstar 4s linear ;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes tobig
+/* Safari 和 Chrome */
+
+{
+    0% {
+        -webkit-transform: scale(0,0);
+    }
+    50% {
+        -webkit-transform: scale(2,2);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(2,2);
+        opacity: 0;
+    }
+}
+
 .people img {
     width: 40%;
 }
+
+.star1 {
+    position: absolute;
+    top: 120vw;
+    left: 15vw;
+    width: 6vw;
+    animation: rotateY 4s linear ;
+    -moz-animation: rotateY 4s linear ;
+    /* Firefox */
+    -webkit-animation: rotateY 4s linear ;
+    /* Safari 和 Chrome */
+    -o-animation: rotateY 4s linear ;
+    /* Opera */
+     animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotateY
+/* Safari 和 Chrome */
+
+{
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+.star2 {
+    position: absolute;
+    top: 30vw;
+    left: 68vw;
+    width: 6vw;
+    animation: starmove 4s linear ;
+    -moz-animation: starmove 4s linear ;
+    /* Firefox */
+    -webkit-animation: starmove 4s linear ;
+    /* Safari 和 Chrome */
+    -o-animation: starmove 4s linear ;
+    /* Opera */
+     animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes starmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        -webkit-transform: translate(0,0);
+    }
+    to {
+        -webkit-transform: translate(3vw,3vw);
+    }
+}
+
+.star1 img {
+    width: 100%;
+}
+
+.star2 img {
+    width: 100%;
+}
+
