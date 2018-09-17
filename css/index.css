@@ -16,7 +16,8 @@ body {
 .senseOne,
 .senseTwo,
 .mask,
-.mask2 {
+.mask2,
+.bg2 {
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -397,6 +398,13 @@ canvas {
     display: none;
     position: absolute;
     height: 100vh;
+}
+
+.bg2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/bg2.png);
 }
 
 .depart {

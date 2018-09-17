@@ -1,7 +1,7 @@
 var vertexHeight = 10000;
 var planeDefinition = 200;
-var planeSize = 945000;
-var totalObjects = 100000;
+var planeSize = 845000;
+var totalObjects = 200000;
 var frame = 0;
 
 var container = document.createElement('div');
@@ -43,7 +43,7 @@ for (i = 0; i < totalObjects; i ++)
 { 
   var vertex = new THREE.Vector3();
   vertex.x = Math.random()*planeSize-(planeSize*.5);
-  vertex.y = (Math.random()*30000);
+  vertex.y = (Math.random()*25000);
   vertex.z = Math.random()*planeSize-(planeSize*.5);
   geometry.vertices.push( vertex );
 }
@@ -54,6 +54,7 @@ var particles = new THREE.ParticleSystem( geometry, material );
 scene.add( particles ); 
 
 var renderer = new THREE.WebGLRenderer();
+renderer.setClearColor(0x151a3d);//画布颜色
 renderer.setSize(window.innerWidth, window.innerHeight);
 container.appendChild( renderer.domElement );
 
