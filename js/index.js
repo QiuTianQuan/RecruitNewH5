@@ -24,6 +24,7 @@ function zhiwenshow() {
     setTimeout(function() {
         document.querySelector(".hand").style.display = "block";
         document.querySelector(".scanbox").style.display = "block";
+        document.querySelector("canvas").style.display = "block";
     }, 14500);
 }
 zhiwen.addEventListener('touchstart', function() {
@@ -89,24 +90,18 @@ scene.fog = new THREE.Fog( 0x23233f, 1, 300000 );
 
 var uniforms = 
     {
-      time: { type: "f", value: 0.0 }
+      time: { type: "f", value: 10.0 }
     };
 
 
 	var material = new THREE.ShaderMaterial( {
             uniforms: uniforms,          
-					vertexShader: document.getElementById( 'vertexShader' ).textContent,	
+			vertexShader: document.getElementById( 'vertexShader' ).textContent,	
             fragmentShader: document.getElementById( 'fragmentShader' ).textContent,
             wireframe: true,
     fog: false
 				} );
 
-
-
-// var	plane = new THREE.Mesh( new THREE.PlaneGeometry( planeSize, planeSize, planeDefinition, planeDefinition ), material );
-// plane.rotation.x -=Math.PI*.5;
-
-// scene.add( plane );
 
 var geometry = new THREE.Geometry();
 
@@ -148,7 +143,7 @@ render();
         camera.position.z -= 100;
       }
            uniforms.time.value = frame;
-        frame += .88;
+        frame += .18;
        //  dateVerts();
         renderer.render( scene, camera );
 			}

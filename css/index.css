@@ -6,6 +6,12 @@ body {
     background-image: radial-gradient(ellipse farthest-corner at center top, #23233f 0%, #000000 60%);
 }
 
+canvas{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
 .senseOne {
     display: block;
     background-image: url(../imgs/bgimg.jpg);
@@ -329,7 +335,7 @@ body {
         -webkit-transform: translate(0,0);   
     }
     to {
-        -webkit-transform: translate(-5.5vw,-12vw;);
+        -webkit-transform: translate(-5.5vw,-15vw);
     }
 }
 
@@ -506,12 +512,12 @@ body {
 }
 
 .bigpeople{
-     animation: tobig 8s linear ;
-    -moz-animation: tobig 8s linear ;
+     animation: tobig 4s linear ;
+    -moz-animation: tobig 4s linear ;
     /* Firefox */
-    -webkit-animation: tobig 8s linear ;
+    -webkit-animation: tobig 4s linear ;
     /* Safari 和 Chrome */
-    -o-animation: tobig 8s linear ;
+    -o-animation: tobig 4s linear ;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -520,7 +526,7 @@ body {
 
 {
     0% {
-        -webkit-transform: scale(0,0);
+        -webkit-transform: scale(1,1);
     }
     50% {
         -webkit-transform: scale(2,2);
