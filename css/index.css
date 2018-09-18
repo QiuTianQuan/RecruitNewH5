@@ -9,7 +9,7 @@ body {
 canvas{
     width: 100vw;
     height: 100vh;
-    display: none;
+    overflow: hidden;
 }
 
 .senseOne {
@@ -335,7 +335,7 @@ canvas{
         -webkit-transform: translate(0,0);   
     }
     to {
-        -webkit-transform: translate(-5.5vw,-15vw);
+        -webkit-transform: translate(-9.5vw,-12vw);
     }
 }
 
