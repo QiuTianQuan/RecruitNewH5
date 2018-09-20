@@ -57,7 +57,7 @@ function plus() {
                 tosence3();
             }
         }
-    }, 70);
+    }, 50);
 }
 
 function logleave() {
@@ -181,7 +181,7 @@ function boxshow() {
     //创建场景
     var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 10000);
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
     camera.position.set(800, 200, 800);
     camera.lookAt({ x: 0, y: 0, z: 0 });
     scene.add(camera);
@@ -290,7 +290,7 @@ function boxshow() {
 
     mesh = new THREE.Mesh(geometry, material);
     mesh.material.transparent = true;
-    mesh.position.y = -120;
+    mesh.position.y = -150;
     mesh.position.x = 20;
 
     scene.add(mesh);

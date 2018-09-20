@@ -5,9 +5,11 @@ body {
 }
 
 .star{
+    position: absolute;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    z-index: -555;
 }
 
 .star canvas {
@@ -516,12 +518,12 @@ body {
 }
 
 .bigpeople{
-     animation: tobig 1s linear ;
-    -moz-animation: tobig 1s linear ;
+     animation: tobig 0.5s linear ;
+    -moz-animation: tobig 0.5s linear ;
     /* Firefox */
-    -webkit-animation: tobig 1s linear ;
+    -webkit-animation: tobig 0.5s linear ;
     /* Safari 和 Chrome */
-    -o-animation: tobig 1s linear ;
+    -o-animation: tobig 0.5s linear ;
     -webkit-animation-fill-mode: forwards;
 }
 
