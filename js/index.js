@@ -175,6 +175,7 @@ function boxshow() {
     renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
     var departbox = document.querySelector(".departbox");
     departbox.appendChild(renderer.domElement);
 
@@ -228,10 +229,10 @@ function boxshow() {
     geometry.faces = faces;
     geometry.computeFaceNormals();
     var texture = THREE.ImageUtils.loadTexture('./imgs/box.png');
-    var maxAnisotropy = renderer.getMaxAnisotropy();
-    texture.anisotropy = maxAnisotropy;
-    texture.magFilter = THREE.NearestFilter
-    texture.minFilter = THREE.NearestFilter
+    // var maxAnisotropy = renderer.getMaxAnisotropy();
+    // texture.anisotropy = maxAnisotropy;
+    // texture.magFilter = THREE.NearestFilter
+    // texture.minFilter = THREE.NearestFilter
     var material = new THREE.MeshPhongMaterial({ map: texture });
 
 
