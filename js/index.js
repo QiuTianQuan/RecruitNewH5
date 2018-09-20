@@ -73,7 +73,7 @@ function tosblack() {
     setTimeout(function() {
         document.querySelector(".black").style.display = "block";
         document.querySelector("main").removeChild(document.querySelector(".star"));
-    }, 19000);
+    }, 18500);
 }
 
 function tosence3() {
@@ -81,7 +81,7 @@ function tosence3() {
         document.querySelector(".sensethree").style.display = "block";
         document.querySelector(".senseTwo").style.display = "none";
         boxshow();
-    }, 19500);
+    }, 19000);
 }
 
 
@@ -171,7 +171,7 @@ function boxshow() {
 
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
-    var renderer = new THREE.WebGLRenderer({ alpha: true });
+    var renderer = new THREE.WebGLRenderer({ alpha: true , antialias:true});
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     var departbox = document.querySelector(".departbox");
@@ -334,7 +334,7 @@ function boxshow() {
 
         mouseX = event.clientX - windowHalfX;
 
-        targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.02;
+        targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown)  * 0.02;
 
     }
 
@@ -374,7 +374,7 @@ function boxshow() {
             event.preventDefault();
 
             mouseX = event.touches[0].pageX - windowHalfX;
-            targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.05;
+            targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.02;
 
         }
 
@@ -397,9 +397,10 @@ function boxshow() {
 
     function render() {
 
-        mesh.rotation.y += (targetRotation - mesh.rotation.y) * 0.05;
+        mesh.rotation.y += (targetRotation - mesh.rotation.y) * 0.02;
 
     }
     threeStart();
 
 }
+
