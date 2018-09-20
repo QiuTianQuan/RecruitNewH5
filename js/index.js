@@ -8,6 +8,14 @@ new Image().src = "imgs/bgimg2.jpg";
 
 
 starshoot();
+
+document.onload=function () {
+    function stopScrolling(event){
+        event.preventDefault();
+    }
+    document.addEventListener("touchmove",stopScrolling,false);
+};
+
 var fast = false;
 var arrowbox = document.querySelector(".arrowbox");
 var mask = document.querySelector(".mask");
