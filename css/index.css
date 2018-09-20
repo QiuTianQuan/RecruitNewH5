@@ -1,15 +1,18 @@
 body {
     -webkit-touch-callout: none !important;
     margin: 0;
-    background-color: #000000;
     overflow: hidden;
-    background-image: radial-gradient(ellipse farthest-corner at center top, #23233f 0%, #000000 60%);
 }
 
-canvas{
+.star{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+.star canvas {
+    width: 100vw;
+    height: 100vh;
 }
 
 .senseOne {
@@ -21,6 +24,7 @@ canvas{
 
 .senseOne,
 .senseTwo,
+.sensethree,
 .mask,
 .mask2,
 .bg2,
@@ -185,73 +189,73 @@ canvas{
 
 .word1 {
     opacity: 0;
-    animation: upto 1.5s linear 2s;  
-    -moz-animation: upto 1.5s linear 2s;
-    -webkit-animation: upto 1.5s linear 2s;
-    -o-animation: upto 1.5s linear 2s;
+    animation: upto 1s linear 1s;  
+    -moz-animation: upto 1s linear 1s;
+    -webkit-animation: upto 1s linear 1s;
+    -o-animation: upto 1s linear 1s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word2 {
     opacity: 0;
-    animation: upto 1.5s linear 3.5s;  
-    -moz-animation: upto 1.5s linear 3.5s;
-    -webkit-animation: upto 1.5s linear 3.5s;
-    -o-animation: upto 1.5s linear 3.5s;
+    animation: upto 1s linear 2s;  
+    -moz-animation: upto 1s linear 2s;
+    -webkit-animation: upto 1s linear 2s;
+    -o-animation: upto 1s linear 2s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word3 {
     opacity: 0;
-    animation: upto 1.5s linear 5s;  
-    -moz-animation: upto 1.5s linear 5s;
-    -webkit-animation: upto 1.5s linear 5s;
-    -o-animation: upto 1.5s linear 5s;
+    animation: upto 1s linear 3s;  
+    -moz-animation: upto 1s linear 3s;
+    -webkit-animation: upto 1s linear 3s;
+    -o-animation: upto 1s linear 3s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word4 {
     opacity: 0;
-    animation: upto 1.5s linear 6.5s;  
-    -moz-animation: upto 1.5s linear 6.5s;
-    -webkit-animation: upto 1.5s linear 6.5s;
-    -o-animation: upto 1.5s linear 6.5s;
+    animation: upto 1s linear 4s;  
+    -moz-animation: upto 1s linear 4s;
+    -webkit-animation: upto 1s linear 4s;
+    -o-animation: upto 1s linear 4s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word5 {
     opacity: 0;
-    animation: upto 1.5s linear 8s;  
-    -moz-animation: upto 1.5s linear 8s;
-    -webkit-animation: upto 1.5s linear 8s;
-    -o-animation: upto 1.5s linear 8s;
+    animation: upto 1s linear 5s;  
+    -moz-animation: upto 1s linear 5s;
+    -webkit-animation: upto 1s linear 5s;
+    -o-animation: upto 1s linear 5s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word6 {
     opacity: 0;
-    animation: upto 1.5s linear 9.5s;  
-    -moz-animation: upto 1.5s linear 9.5s;
-    -webkit-animation: upto 1.5s linear 9.5s;
-    -o-animation: upto 1.5s linear 9.5s;
+    animation: upto 1s linear 6s;  
+    -moz-animation: upto 1s linear 6s;
+    -webkit-animation: upto 1s linear 6s;
+    -o-animation: upto 1s linear 6s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word7 {
     opacity: 0;
-    animation: upto 1.5s linear 11s;  
-    -moz-animation: upto 1.5s linear 11s;
-    -webkit-animation: upto 1.5s linear 11s;
-    -o-animation: upto 1.5s linear 11s;
+    animation: upto 1s linear 7s;  
+    -moz-animation: upto 1s linear 7s;
+    -webkit-animation: upto 1s linear 7s;
+    -o-animation: upto 1s linear 7s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .word8 {
     opacity: 0;
-    animation: upto 1.5s linear 12.5s;  
-    -moz-animation: upto 1.5s linear 12.5s;
-    -webkit-animation: upto 1.5s linear 12.5s;
-    -o-animation: upto 1.5s linear 12.5s;
+    animation: upto 1s linear 8s;  
+    -moz-animation: upto 1s linear 8s;
+    -webkit-animation: upto 1s linear 8s;
+    -o-animation: upto 1s linear 8s;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -335,7 +339,7 @@ canvas{
         -webkit-transform: translate(0,0);   
     }
     to {
-        -webkit-transform: translate(-9.5vw,-12vw);
+        -webkit-transform: translate(-10.5vw,-12vw);
     }
 }
 
@@ -364,12 +368,12 @@ canvas{
     top: 0;
     left: 0;
     background-image: url(../imgs/mask2.png);
-    animation: boxshow 2s linear 2s;
-    -moz-animation: boxshow 2s linear 2s;
+    animation: boxshow 2s linear 1s;
+    -moz-animation: boxshow 2s linear 1s;
     /* Firefox */
-    -webkit-animation: boxshow 2s linear 2s;
+    -webkit-animation: boxshow 2s linear 1s;
     /* Safari 和 Chrome */
-    -o-animation: boxshow 2s linear 2s;
+    -o-animation: boxshow 2s linear 1s;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -407,44 +411,44 @@ canvas{
 
 .depart {
     opacity: 0;
-    animation: boxshow 2s linear 5s;
-    -moz-animation: boxshow 2s linear 5s;
+    animation: boxshow 2s linear 3s;
+    -moz-animation: boxshow 2s linear 3s;
     /* Firefox */
-    -webkit-animation: boxshow 2s linear 5s;
+    -webkit-animation: boxshow 2s linear 3s;
     /* Safari 和 Chrome */
-    -o-animation: boxshow 2s linear 5s;
+    -o-animation: boxshow 2s linear 3s;
     -webkit-animation-fill-mode: forwards;
 }
 
 .chanpin {
     opacity: 0;
-    animation: logshow 5s linear 6s;
-    -moz-animation: logshow 5s linear 6s;
+    animation: logshow 3s linear 3s;
+    -moz-animation: logshow 3s linear 3s;
     /* Firefox */
-    -webkit-animation: logshow 5s linear 6s;
+    -webkit-animation: logshow 3s linear 3s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 5s linear 6s;
+    -o-animation: logshow 3s linear 3s;
 }
 
 .shijue {
     opacity: 0;
-    animation: logshow 5s linear 11s;
-    -moz-animation: logshow 5s linear 11s;
+    animation: logshow 3s linear 6s;
+    -moz-animation: logshow 3s linear 6s;
     /* Firefox */
-    -webkit-animation: logshow 5s linear 11s;
+    -webkit-animation: logshow 3s linear 6s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 5s linear 11s;
+    -o-animation: logshow 3s linear 6s;
 }
 
 
 .web {
     opacity: 0;
-    animation: logshow 5s linear 16s;
-    -moz-animation: logshow 5s linear 16s;
+    animation: logshow 3s linear 9s;
+    -moz-animation: logshow 3s linear 9s;
     /* Firefox */
-    -webkit-animation: logshow 5s linear 16s;
+    -webkit-animation: logshow 3s linear 9s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 5s linear 16s;
+    -o-animation: logshow 3s linear 9s;
 }
 
 
@@ -452,22 +456,22 @@ canvas{
 
 .mobile {
     opacity: 0;
-    animation: logshow 5s linear 21s;
-    -moz-animation: logshow 5s linear 21s;
+    animation: logshow 3s linear 12s;
+    -moz-animation: logshow 3s linear 12s;
     /* Firefox */
-    -webkit-animation: logshow 5s linear 21s;
+    -webkit-animation: logshow 3s linear 12s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 5s linear 21s;
+    -o-animation: logshow 3s linear 12s;
 }
 
 .sre {
     opacity: 0;
-    animation: logshow 5s linear 26s;
-    -moz-animation: logshow 5s linear 26s;
+    animation: logshow 3s linear 15s;
+    -moz-animation: logshow 3s linear 15s;
     /* Firefox */
-    -webkit-animation: logshow 5s linear 26s;
+    -webkit-animation: logshow 3s linear 15s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 5s linear 26s;
+    -o-animation: logshow 3s linear 15s;
 }
 
 @-webkit-keyframes logshow
@@ -512,12 +516,12 @@ canvas{
 }
 
 .bigpeople{
-     animation: tobig 4s linear ;
-    -moz-animation: tobig 4s linear ;
+     animation: tobig 1s linear ;
+    -moz-animation: tobig 1s linear ;
     /* Firefox */
-    -webkit-animation: tobig 4s linear ;
+    -webkit-animation: tobig 1s linear ;
     /* Safari 和 Chrome */
-    -o-animation: tobig 4s linear ;
+    -o-animation: tobig 1s linear ;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -526,16 +530,10 @@ canvas{
 
 {
     0% {
-        -webkit-transform: scale(1,1);
+        -webkit-transform: scale(0,0);
     }
-    50% {
-        -webkit-transform: scale(2,2);
-        opacity: 1;
-    }
-
     100% {
-        -webkit-transform: scale(2,2);
-        opacity: 0;
+        -webkit-transform: scale(3,3);
     }
 }
 
@@ -607,3 +605,20 @@ canvas{
     width: 100%;
 }
 
+.sensethree{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/bg3.jpg);
+}
+
+.black {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
