@@ -171,7 +171,8 @@ function boxshow() {
 
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
-    var renderer = new THREE.WebGLRenderer({ alpha: true , antialias:true});
+    var renderer = new THREE.WebGLRenderer({antialias:true});
+    renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     var departbox = document.querySelector(".departbox");
