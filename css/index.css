@@ -4,7 +4,7 @@ body {
     overflow: hidden;
 }
 
-.star{
+.star {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -76,25 +76,21 @@ body {
 
 {
     from {
-        -webkit-transform: translate(0,0);
+        -webkit-transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(0,6vw);
+        -webkit-transform: translate(0, 6vw);
     }
 }
 
 
 
-/*.aperture {
-    border-radius: 50px;
-    width: 50vw;
-    height: 50vw;
-    box-shadow: 0 0 10px white;
-    border-left-width: 30vw;
-    border-top-width: 100vw;
-    border-right-width: 50vw;
-    border-bottom-width: 80vw;
-}*/
+img {
+     pointer-event: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 
 .wordbox {
     display: none;
@@ -191,7 +187,7 @@ body {
 
 .word1 {
     opacity: 0;
-    animation: upto 1s linear 1s;  
+    animation: upto 1s linear 1s;
     -moz-animation: upto 1s linear 1s;
     -webkit-animation: upto 1s linear 1s;
     -o-animation: upto 1s linear 1s;
@@ -200,64 +196,64 @@ body {
 
 .word2 {
     opacity: 0;
-    animation: upto 1s linear 2s;  
+    animation: upto 1s linear 1.5s;
+    -moz-animation: upto 1s linear 1.5s;
+    -webkit-animation: upto 1s linear 1.5s;
+    -o-animation: upto 1s linear 1.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.word3 {
+    opacity: 0;
+    animation: upto 1s linear 2s;
     -moz-animation: upto 1s linear 2s;
     -webkit-animation: upto 1s linear 2s;
     -o-animation: upto 1s linear 2s;
     -webkit-animation-fill-mode: forwards;
 }
 
-.word3 {
+.word4 {
     opacity: 0;
-    animation: upto 1s linear 3s;  
+    animation: upto 1s linear 2.5s;
+    -moz-animation: upto 1s linear 2.5s;
+    -webkit-animation: upto 1s linear 2.5s;
+    -o-animation: upto 1s linear 2.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.word5 {
+    opacity: 0;
+    animation: upto 1s linear 3s;
     -moz-animation: upto 1s linear 3s;
     -webkit-animation: upto 1s linear 3s;
     -o-animation: upto 1s linear 3s;
     -webkit-animation-fill-mode: forwards;
 }
 
-.word4 {
+.word6 {
     opacity: 0;
-    animation: upto 1s linear 4s;  
+    animation: upto 1s linear 3.5s;
+    -moz-animation: upto 1s linear 3.5s;
+    -webkit-animation: upto 1s linear 3.5s;
+    -o-animation: upto 1s linear 3.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.word7 {
+    opacity: 0;
+    animation: upto 1s linear 4s;
     -moz-animation: upto 1s linear 4s;
     -webkit-animation: upto 1s linear 4s;
     -o-animation: upto 1s linear 4s;
     -webkit-animation-fill-mode: forwards;
 }
 
-.word5 {
-    opacity: 0;
-    animation: upto 1s linear 5s;  
-    -moz-animation: upto 1s linear 5s;
-    -webkit-animation: upto 1s linear 5s;
-    -o-animation: upto 1s linear 5s;
-    -webkit-animation-fill-mode: forwards;
-}
-
-.word6 {
-    opacity: 0;
-    animation: upto 1s linear 6s;  
-    -moz-animation: upto 1s linear 6s;
-    -webkit-animation: upto 1s linear 6s;
-    -o-animation: upto 1s linear 6s;
-    -webkit-animation-fill-mode: forwards;
-}
-
-.word7 {
-    opacity: 0;
-    animation: upto 1s linear 7s;  
-    -moz-animation: upto 1s linear 7s;
-    -webkit-animation: upto 1s linear 7s;
-    -o-animation: upto 1s linear 7s;
-    -webkit-animation-fill-mode: forwards;
-}
-
 .word8 {
     opacity: 0;
-    animation: upto 1s linear 8s;  
-    -moz-animation: upto 1s linear 8s;
-    -webkit-animation: upto 1s linear 8s;
-    -o-animation: upto 1s linear 8s;
+    animation: upto 1s linear 4.5s;
+    -moz-animation: upto 1s linear 4.5s;
+    -webkit-animation: upto 1s linear 4.5s;
+    -o-animation: upto 1s linear 4.5s;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -267,11 +263,11 @@ body {
 
 {
     from {
-        -webkit-transform: translate(0,0);
+        -webkit-transform: translate(0, 0);
         opacity: 0;
     }
     to {
-        -webkit-transform: translate(0,-2vh);
+        -webkit-transform: translate(0, -2vh);
         opacity: 1;
     }
 }
@@ -313,11 +309,11 @@ body {
 
 {
     from {
-        -webkit-transform: translate(0,0);
+        -webkit-transform: translate(0, 0);
         opacity: 0.5;
     }
     to {
-        -webkit-transform: translate(0,-21vw);
+        -webkit-transform: translate(0, -21vw);
         opacity: 1;
     }
 }
@@ -338,10 +334,10 @@ body {
 
 {
     from {
-        -webkit-transform: translate(0,0);   
+        -webkit-transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(-10.5vw,-12vw);
+        -webkit-transform: translate(-13.5vw, -12vw);
     }
 }
 
@@ -385,14 +381,14 @@ body {
     width: 100vw;
     text-align: center;
     z-index: 888;
-    animation: rotate 2s linear ;
-    -moz-animation: rotate 2s linear ;
+    animation: rotate 2s linear;
+    -moz-animation: rotate 2s linear;
     /* Firefox */
-    -webkit-animation: rotate 2s linear ;
+    -webkit-animation: rotate 2s linear;
     /* Safari 和 Chrome */
-    -o-animation: rotate 2s linear ;
+    -o-animation: rotate 2s linear;
     /* Opera */
-     animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes rotate
@@ -424,33 +420,33 @@ body {
 
 .chanpin {
     opacity: 0;
-    animation: logshow 3s linear 3s;
-    -moz-animation: logshow 3s linear 3s;
+    animation: logshow 2s linear 3s;
+    -moz-animation: logshow 2s linear 3s;
     /* Firefox */
-    -webkit-animation: logshow 3s linear 3s;
+    -webkit-animation: logshow 2s linear 3s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 3s linear 3s;
+    -o-animation: logshow 2s linear 3s;
 }
 
 .shijue {
     opacity: 0;
-    animation: logshow 3s linear 6s;
-    -moz-animation: logshow 3s linear 6s;
+    animation: logshow 2s linear 5s;
+    -moz-animation: logshow 2s linear 5s;
     /* Firefox */
-    -webkit-animation: logshow 3s linear 6s;
+    -webkit-animation: logshow 2s linear 5s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 3s linear 6s;
+    -o-animation: logshow 2s linear 5s;
 }
 
 
 .web {
     opacity: 0;
-    animation: logshow 3s linear 9s;
-    -moz-animation: logshow 3s linear 9s;
+    animation: logshow 2s linear 7s;
+    -moz-animation: logshow 2s linear 7s;
     /* Firefox */
-    -webkit-animation: logshow 3s linear 9s;
+    -webkit-animation: logshow 2s linear 7s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 3s linear 9s;
+    -o-animation: logshow 2s linear 7s;
 }
 
 
@@ -458,35 +454,39 @@ body {
 
 .mobile {
     opacity: 0;
-    animation: logshow 3s linear 12s;
-    -moz-animation: logshow 3s linear 12s;
+    animation: logshow 2s linear 9s;
+    -moz-animation: logshow 2s linear 9s;
     /* Firefox */
-    -webkit-animation: logshow 3s linear 12s;
+    -webkit-animation: logshow 2s linear 9s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 3s linear 12s;
+    -o-animation: logshow 2s linear 9s;
 }
 
 .sre {
     opacity: 0;
-    animation: logshow 3s linear 15s;
-    -moz-animation: logshow 3s linear 15s;
+    animation: logshow 2s linear 11s;
+    -moz-animation: logshow 2s linear 11s;
     /* Firefox */
-    -webkit-animation: logshow 3s linear 15s;
+    -webkit-animation: logshow 2s linear 11s;
     /* Safari 和 Chrome */
-    -o-animation: logshow 3s linear 15s;
+    -o-animation: logshow 2s linear 11s;
 }
 
 @-webkit-keyframes logshow
 /* Safari 和 Chrome */
 
 {
-    0%{
+    0% {
         opacity: 0;
     }
-    50%{
+    30% {
         opacity: 1;
     }
-    100%{
+
+    70% {
+        opacity: 1;
+    }
+    100% {
         opacity: 0;
     }
 }
@@ -517,13 +517,13 @@ body {
     position: absolute;
 }
 
-.bigpeople{
-     animation: tobig 0.5s linear ;
-    -moz-animation: tobig 0.5s linear ;
+.bigpeople {
+    animation: tobig 0.5s linear;
+    -moz-animation: tobig 0.5s linear;
     /* Firefox */
-    -webkit-animation: tobig 0.5s linear ;
+    -webkit-animation: tobig 0.5s linear;
     /* Safari 和 Chrome */
-    -o-animation: tobig 0.5s linear ;
+    -o-animation: tobig 0.5s linear;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -532,10 +532,10 @@ body {
 
 {
     0% {
-        -webkit-transform: scale(0,0);
+        -webkit-transform: scale(0, 0);
     }
     100% {
-        -webkit-transform: scale(3,3);
+        -webkit-transform: scale(3, 3);
     }
 }
 
@@ -548,15 +548,15 @@ body {
     top: 120vw;
     left: 15vw;
     width: 6vw;
-    animation: rotateY 4s linear ;
-    -moz-animation: rotateY 4s linear ;
+    animation: rotateY 4s linear;
+    -moz-animation: rotateY 4s linear;
     /* Firefox */
-    -webkit-animation: rotateY 4s linear ;
+    -webkit-animation: rotateY 4s linear;
     /* Safari 和 Chrome */
-    -o-animation: rotateY 4s linear ;
+    -o-animation: rotateY 4s linear;
     /* Opera */
-     animation-iteration-count: infinite;
-     -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
 }
 
 @-webkit-keyframes rotateY
@@ -564,10 +564,10 @@ body {
 
 {
     from {
-        -webkit-transform: translate(0,0);
+        -webkit-transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(0,3vw);
+        -webkit-transform: translate(0, 5vw);
     }
 }
 
@@ -576,15 +576,15 @@ body {
     top: 30vw;
     left: 68vw;
     width: 6vw;
-    animation: starmove 4s linear ;
-    -moz-animation: starmove 4s linear ;
+    animation: starmove 4s linear;
+    -moz-animation: starmove 4s linear;
     /* Firefox */
-    -webkit-animation: starmove 4s linear ;
+    -webkit-animation: starmove 4s linear;
     /* Safari 和 Chrome */
-    -o-animation: starmove 4s linear ;
+    -o-animation: starmove 4s linear;
     /* Opera */
-     animation-iteration-count: infinite;
-     -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
 }
 
 @-webkit-keyframes starmove
@@ -592,10 +592,10 @@ body {
 
 {
     from {
-        -webkit-transform: translate(0,0);
+        -webkit-transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(3vw,3vw);
+        -webkit-transform: translate(5vw, 5vw);
     }
 }
 
@@ -607,7 +607,7 @@ body {
     width: 100%;
 }
 
-.sensethree{
+.sensethree {
     display: none;
     position: absolute;
     top: 0;

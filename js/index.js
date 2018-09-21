@@ -42,7 +42,7 @@ function zhiwenshow() {
     setTimeout(function() {
         document.querySelector(".hand").style.display = "block";
         document.querySelector(".scanbox").style.display = "block";
-    }, 9000);
+    }, 5500);
 }
 zhiwen.addEventListener('touchstart', function() {
     document.querySelector(".scanbox").classList.remove("boxs");
@@ -74,14 +74,14 @@ function logleave() {
         document.querySelector(".depart").style.display = "none";
         fast = true;
         document.querySelector(".people").className = "people" + " " + 'bigpeople';
-    }, 18000);
+    }, 14000);
 }
 
 function tosblack() {
     setTimeout(function() {
         document.querySelector(".black").style.display = "block";
         document.querySelector("main").removeChild(document.querySelector(".star"));
-    }, 18500);
+    }, 14500);
 }
 
 function tosence3() {
@@ -89,7 +89,7 @@ function tosence3() {
         document.querySelector(".sensethree").style.display = "block";
         document.querySelector(".senseTwo").style.display = "none";
         boxshow();
-    }, 19000);
+    }, 15000);
 }
 
 
@@ -191,28 +191,34 @@ function boxshow() {
     //创建场景
     var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
-    camera.position.set(800, 200, 800);
+    var camera = new THREE.PerspectiveCamera(85, window.innerWidth / window.innerHeight, 0.1, 10000);
+    camera.position.set(800, 400, 800);
     camera.lookAt({ x: 0, y: 0, z: 0 });
     scene.add(camera);
     var light1 = new THREE.AmbientLight(0xffffff);
-    light1.position.set(800, 200, 800);
+    light1.position.set(800, 0, 800);
     scene.add(light1);
 
-    var z = 250 / Math.tan(0.017453293 * 72);
+    var R1 = 400;
+    var R2 = 500;
+    var cos18 = Math.cos(0.017453293 *18);
+    var sin18 = Math.sin(0.017453293 *18);
+    var sin36 = Math.sin(0.017453293 *36);
+    var cos36 = Math.cos(0.017453293 *36);
+    console.log(R1*cos18)
 
     var vertices = [
-        new THREE.Vector3(0, 650, -294 - z),
-        new THREE.Vector3(-404, 650, 0 - z),
-        new THREE.Vector3(-250, 650, 475 - z),
-        new THREE.Vector3(250, 650, 475 - z),
-        new THREE.Vector3(404, 650, 0 - z),
+        new THREE.Vector3(0, 700, -R1),
+        new THREE.Vector3(-R1*cos18, 700, -R1*sin18),
+        new THREE.Vector3(-R1*sin36, 700, R1*cos36),
+        new THREE.Vector3(R1*sin36, 700, R1*cos36),
+        new THREE.Vector3(R1*cos18, 700, -R1*sin18),
 
-        new THREE.Vector3(0, 0, -294 - z),
-        new THREE.Vector3(-404, 0, 0 - z),
-        new THREE.Vector3(-250, 0, 475 - z),
-        new THREE.Vector3(250, 0, 475 - z),
-        new THREE.Vector3(404, 0, 0 - z)
+        new THREE.Vector3(0, 0, -R2),
+        new THREE.Vector3(-R2*cos18, 0, -R2*sin18),
+        new THREE.Vector3(-R2*sin36, 0, R2*cos36),
+        new THREE.Vector3(R2*sin36, 0, R2*cos36),
+        new THREE.Vector3(R2*cos18, 0, -R2*sin18),
     ];
 
     var faces = [
