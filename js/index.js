@@ -11,11 +11,11 @@ stopDrop();
 function stopDrop() {
     var lastY;//最后一次y坐标点
     document.addEventListener('touchstart', function(event) {
-        lastY = event.originalEvent.changedTouches[0].clientY;//点击屏幕时记录最后一次Y度坐标。
+        lastY = event.changedTouches[0].clientY;//点击屏幕时记录最后一次Y度坐标。
     });
     document.addEventListener('touchmove', function(event) {
-        var y = event.originalEvent.changedTouches[0].clientY;
-        var st = $(this).scrollTop(); //滚动条高度  
+        var y = event.changedTouches[0].clientY;
+        var st = window.scrollTo(); //滚动条高度  //滚动条高度  
         if (y >= lastY && st <= 10) {//如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。
             lastY = y;
             event.preventDefault();
@@ -98,7 +98,7 @@ function tosblack() {
     setTimeout(function() {
         document.querySelector(".black").style.display = "block";
         document.querySelector("main").removeChild(document.querySelector(".star"));
-    }, 13500);
+    }, 14000);
 }
 
 function tosence3() {
@@ -106,7 +106,7 @@ function tosence3() {
         document.querySelector(".sensethree").style.display = "block";
         document.querySelector(".senseTwo").style.display = "none";
         boxshow();
-    }, 14000);
+    }, 14500);
 }
 
 
@@ -209,11 +209,11 @@ function boxshow() {
     var scene = new THREE.Scene();
 
     var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 10000);
-    camera.position.set(800, 300, 800);
+    camera.position.set(800, 200, 800);
     camera.lookAt({ x: 0, y: 0, z: 0 });
     scene.add(camera);
     var light1 = new THREE.AmbientLight(0xffffff);
-    light1.position.set(800, 0, 800);
+    light1.position.set(800, 200, 800);
     scene.add(light1);
 
     var R1 = 450;
