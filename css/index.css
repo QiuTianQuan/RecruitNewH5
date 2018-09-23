@@ -1,3 +1,7 @@
+html{
+    overscroll-behavior-y: contain;
+}
+
 body {
     -webkit-touch-callout: none !important;
     margin: 0;
@@ -573,7 +577,7 @@ img {
 
 .senseTwo {
     display: none;
-    position: absolute;
+    position: fixed;
     height: 100vh;
 }
 
@@ -989,6 +993,18 @@ img {
     width: 100%;
 }
 
+.star3 img {
+    width: 100%;
+}
+
+.star4 img {
+    width: 100%;
+}
+
+.star5 img {
+    width: 100%;
+}
+
 .sensethree {
     display: none;
     position: fixed;
@@ -1005,4 +1021,57 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.star3 {
+    position: absolute;
+    top: 40vw;
+    left: 6vw;
+    width: 6vw;
+    animation: starmove 4s linear;
+    -moz-animation: starmove 4s linear;
+    /* Firefox */
+    -webkit-animation: starmove 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: starmove 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.star5 {
+    position: absolute;
+    top: 10vw;
+    left: 65vw;
+    width: 6vw;
+    animation: rotateY 4s linear;
+    -moz-animation: rotateY 4s linear;
+    /* Firefox */
+    -webkit-animation: rotateY 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: rotateY 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.star4 {
+    position: absolute;
+    top: 80vw;
+    left: 90vw;
+    width: 6vw;
+    animation: rotateY 4s linear;
+    -moz-animation: rotateY 4s linear;
+    /* Firefox */
+    -webkit-animation: rotateY 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: rotateY 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.departbox {
+    z-index: 999;
+    position: absolute;
 }

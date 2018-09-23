@@ -6,24 +6,6 @@ new Image().src = "imgs/mask2.png";
 new Image().src = "imgs/box.png";
 new Image().src = "imgs/bgimg2.jpg";
 
-// stopDrop();
-
-// function stopDrop() {
-//     var lastY;//最后一次y坐标点
-//     document.addEventListener('touchstart', function(event) {
-//         lastY = event.changedTouches[0].clientY;//点击屏幕时记录最后一次Y度坐标。
-//     });
-//     document.addEventListener('touchmove', function(event) {
-//         var y = event.changedTouches[0].clientY;
-//         var st = window.scrollTo(); //滚动条高度  //滚动条高度  
-//         if (y >= lastY && st <= 10) {//如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。
-//             lastY = y;
-//             event.preventDefault();
-//         }
-//         lastY = y;
-//  
-//     });
-// }
 
 
 starshoot();
@@ -105,6 +87,9 @@ function tosence3() {
     }, 14500);
 }
 
+// document.querySelector(".sensethree").style.display = "block";
+//         document.querySelector(".senseOne").style.display = "none";
+//  boxshow();
 
 //three.js
 function starshoot() {
@@ -212,8 +197,8 @@ function boxshow() {
     light1.position.set(800, 200, 800);
     scene.add(light1);
 
-    var R1 = 450;
-    var R2 = 500;
+    var R1 = 370;
+    var R2 = 400;
     var cos18 = Math.cos(0.017453293 *18);
     var sin18 = Math.sin(0.017453293 *18);
     var sin36 = Math.sin(0.017453293 *36);
@@ -221,11 +206,11 @@ function boxshow() {
     console.log(R1*cos18)
 
     var vertices = [
-        new THREE.Vector3(0, 700, -R1),
-        new THREE.Vector3(-R1*cos18, 700, -R1*sin18),
-        new THREE.Vector3(-R1*sin36, 700, R1*cos36),
-        new THREE.Vector3(R1*sin36, 700, R1*cos36),
-        new THREE.Vector3(R1*cos18, 700, -R1*sin18),
+        new THREE.Vector3(0, 650, -R1),
+        new THREE.Vector3(-R1*cos18, 650, -R1*sin18),
+        new THREE.Vector3(-R1*sin36, 650, R1*cos36),
+        new THREE.Vector3(R1*sin36, 650, R1*cos36),
+        new THREE.Vector3(R1*cos18, 650, -R1*sin18),
 
         new THREE.Vector3(0, 0, -R2),
         new THREE.Vector3(-R2*cos18, 0, -R2*sin18),
@@ -319,7 +304,7 @@ function boxshow() {
 
     mesh = new THREE.Mesh(geometry, material);
     mesh.material.transparent = true;
-    mesh.position.y = -150;
+    mesh.position.y = -170;
     mesh.position.x = 20;
 
     scene.add(mesh);
