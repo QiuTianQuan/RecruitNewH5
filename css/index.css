@@ -70,6 +70,17 @@ body {
     animation-iteration-count: infinite;
 }
 
+@keyframes float
+/* Safari 和 Chrome */
+
+{
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 6vw);
+    }
+}
 
 @-webkit-keyframes float
 /* Safari 和 Chrome */
@@ -83,7 +94,29 @@ body {
     }
 }
 
+@-moz-keyframes float
+/* Safari 和 Chrome */
 
+{
+    from {
+        -moz-transform: translate(0, 0);
+    }
+    to {
+        -moz-transform: translate(0, 6vw);
+    }
+}
+
+@-o-keyframes float
+/* Safari 和 Chrome */
+
+{
+    from {
+        -o-transform: translate(0, 0);
+    }
+    to {
+        -o-transform: translate(0, 6vw);
+    }
+}
 
 img {
      pointer-event: none;
@@ -111,7 +144,43 @@ img {
 }
 
 
+@keyframes boxshow
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes boxshow
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes boxshow
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes boxshow
 /* Safari 和 Chrome */
 
 {
@@ -153,13 +222,25 @@ img {
 .boxs {
     animation: boxstar 1s;
     -moz-animation: boxstar 1s;
-    /* Firefox */
     -webkit-animation: boxstar 1s;
-    /* Safari 和 Chrome */
     -o-animation: boxstar 1s;
-    /* Opera */
+     animation-direction: alternate;
     -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+
+@keyframes boxstar
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes boxstar
@@ -174,15 +255,41 @@ img {
     }
 }
 
+@-moz-keyframes boxstar
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes boxstar
+/* Safari 和 Chrome */
+
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .zhiwen {
     display: block;
     margin: 0 auto;
     width: 70%;
-    margin-top: 2vw;
+    /*margin-top: 2vw;*/
+    height: 100%;
     overflow: hidden;
     opacity: 0.15;
-    -webkit-user-select: none;
+    background: url(../imgs/zhiwen.png) center center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .word1 {
@@ -258,6 +365,20 @@ img {
 }
 
 
+@keyframes upto
+/* Safari 和 Chrome */
+
+{
+    from {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, -2vh);
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes upto
 /* Safari 和 Chrome */
 
@@ -272,6 +393,33 @@ img {
     }
 }
 
+@-moz-keyframes upto
+/* Safari 和 Chrome */
+
+{
+    from {
+        -moz-transform: translate(0, 0);
+        opacity: 0;
+    }
+    to {
+        -moz-transform: translate(0, -2vh);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes upto
+/* Safari 和 Chrome */
+
+{
+    from {
+        -o-transform: translate(0, 0);
+        opacity: 0;
+    }
+    to {
+        -o-transform: translate(0, -2vh);
+        opacity: 1;
+    }
+}
 
 
 .hand {
@@ -293,6 +441,7 @@ img {
     border: solid 1px white;
     width: 80%;
     margin: 0 auto;
+    margin-top: -2vw;
     animation: scanshow 1s;
     -moz-animation: scanshow 1s;
     /* Firefox */
@@ -300,8 +449,25 @@ img {
     /* Safari 和 Chrome */
     -o-animation: scanshow 1s;
     /* Opera */
+     animation-direction: alternate;
     -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+
+@keyframes scanshow
+/* Safari 和 Chrome */
+
+{
+    from {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    to {
+        -webkit-transform: translate(0, -20vw);
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes scanshow
@@ -309,11 +475,39 @@ img {
 
 {
     from {
-        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
         opacity: 0.5;
     }
     to {
-        -webkit-transform: translate(0, -21vw);
+        transform: translate(0, -20vw);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes scanshow
+/* Safari 和 Chrome */
+
+{
+    from {
+        -o-transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    to {
+        -o-transform: translate(0, -20vw);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes scanshow
+/* Safari 和 Chrome */
+
+{
+    from {
+        -moz-transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    to {
+        -moz-transform: translate(0, -20vw);
         opacity: 1;
     }
 }
@@ -327,6 +521,42 @@ img {
     -o-animation: handmove 2s;
     /* Opera */
     -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes handmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        -webkit-transform: translate(0, 0);
+    }
+    to {
+        -webkit-transform: translate(-13.5vw, -12vw);
+    }
+}
+
+@-webkit-keyframes handmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        -webkit-transform: translate(0, 0);
+    }
+    to {
+        -webkit-transform: translate(-13.5vw, -12vw);
+    }
+}
+
+@-webkit-keyframes handmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        -webkit-transform: translate(0, 0);
+    }
+    to {
+        -webkit-transform: translate(-13.5vw, -12vw);
+    }
 }
 
 @-webkit-keyframes handmove
@@ -377,7 +607,7 @@ img {
 
 
 .cricle {
-    margin-top: 50vw;
+    margin-top: 45vw;
     width: 100vw;
     text-align: center;
     z-index: 888;
@@ -404,7 +634,7 @@ img {
 }
 
 .cricle img {
-    width: 80%;
+    width: 70%;
 }
 
 .depart {
@@ -466,15 +696,62 @@ img {
     opacity: 0;
     animation: logshow 2s linear 11s;
     -moz-animation: logshow 2s linear 11s;
-    /* Firefox */
     -webkit-animation: logshow 2s linear 11s;
-    /* Safari 和 Chrome */
     -o-animation: logshow 2s linear 11s;
 }
 
-@-webkit-keyframes logshow
-/* Safari 和 Chrome */
+@keyframes logshow
+{
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
 
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes logshow
+{
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes logshow
+{
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes logshow
 {
     0% {
         opacity: 0;
@@ -495,7 +772,7 @@ img {
     position: absolute;
     width: 100vw;
     z-index: 999;
-    top: 65vw;
+    top: 68vw;
 }
 
 .log {
@@ -506,25 +783,39 @@ img {
 
 .log img {
     display: inline-block;
-    width: 55%;
+    width: 40%;
 }
 
 
 .people {
-    margin-top: 70vw;
-    width: 100vw;
+    left: 50%;
+    width: 40%;
+    margin-left: -20%;
+    margin-top: 63vw;  
     text-align: center;
     position: absolute;
 }
 
 .bigpeople {
-    animation: tobig 0.5s linear;
-    -moz-animation: tobig 0.5s linear;
+    animation: tobig 1s linear;
+    -moz-animation: tobig 1s linear;
     /* Firefox */
-    -webkit-animation: tobig 0.5s linear;
+    -webkit-animation: tobig 1s linear;
     /* Safari 和 Chrome */
-    -o-animation: tobig 0.5s linear;
+    -o-animation: tobig 1s linear;
     -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes tobig
+/* Safari 和 Chrome */
+
+{
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(3, 3);
+    }
 }
 
 @-webkit-keyframes tobig
@@ -539,8 +830,32 @@ img {
     }
 }
 
+@-moz-keyframes tobig
+/* Safari 和 Chrome */
+
+{
+    0% {
+        -moz-transform: scale(0, 0);
+    }
+    100% {
+        -moz-transform: scale(3, 3);
+    }
+}
+
+@-o-keyframes tobig
+/* Safari 和 Chrome */
+
+{
+    0% {
+        -o-transform: scale(0, 0);
+    }
+    100% {
+        -o-transform: scale(3, 3);
+    }
+}
+
 .people img {
-    width: 40%;
+    width: 100%;
 }
 
 .star1 {
@@ -559,15 +874,47 @@ img {
     -webkit-animation-direction: alternate;
 }
 
-@-webkit-keyframes rotateY
-/* Safari 和 Chrome */
+@keyframes rotateY
+{
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 5vw);
+    }
+}
 
+@-webkit-keyframes rotateY
 {
     from {
         -webkit-transform: translate(0, 0);
     }
     to {
         -webkit-transform: translate(0, 5vw);
+    }
+}
+
+@-moz-keyframes rotateY
+/* Safari 和 Chrome */
+
+{
+    from {
+        -moz-transform: translate(0, 0);
+    }
+    to {
+        -moz-transform: translate(0, 5vw);
+    }
+}
+
+@-o-keyframes rotateY
+/* Safari 和 Chrome */
+
+{
+    from {
+        -o-transform: translate(0, 0);
+    }
+    to {
+        -o-transform: translate(0, 5vw);
     }
 }
 
@@ -587,6 +934,17 @@ img {
     -webkit-animation-direction: alternate;
 }
 
+@keyframes starmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(5vw, 5vw);
+    }
+}
 @-webkit-keyframes starmove
 /* Safari 和 Chrome */
 
@@ -596,6 +954,30 @@ img {
     }
     to {
         -webkit-transform: translate(5vw, 5vw);
+    }
+}
+
+@-moz-keyframes starmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        -moz-transform: translate(0, 0);
+    }
+    to {
+        -moz-transform: translate(5vw, 5vw);
+    }
+}
+
+@-o-keyframes starmove
+/* Safari 和 Chrome */
+
+{
+    from {
+        -o-transform: translate(0, 0);
+    }
+    to {
+        -o-transform: translate(5vw, 5vw);
     }
 }
 
@@ -609,7 +991,7 @@ img {
 
 .sensethree {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-image: url(../imgs/bg3.jpg);

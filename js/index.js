@@ -6,32 +6,28 @@ new Image().src = "imgs/mask2.png";
 new Image().src = "imgs/box.png";
 new Image().src = "imgs/bgimg2.jpg";
 
-stopDrop();
+// stopDrop();
 
-function stopDrop() {
-    var lastY;//最后一次y坐标点
-    document.addEventListener('touchstart', function(event) {
-        lastY = event.changedTouches[0].clientY;//点击屏幕时记录最后一次Y度坐标。
-    });
-    document.addEventListener('touchmove', function(event) {
-        var y = event.changedTouches[0].clientY;
-        var st = window.scrollTo(); //滚动条高度  //滚动条高度  
-        if (y >= lastY && st <= 10) {//如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。
-            lastY = y;
-            event.preventDefault();
-        }
-        lastY = y;
- 
-    });
-}
+// function stopDrop() {
+//     var lastY;//最后一次y坐标点
+//     document.addEventListener('touchstart', function(event) {
+//         lastY = event.changedTouches[0].clientY;//点击屏幕时记录最后一次Y度坐标。
+//     });
+//     document.addEventListener('touchmove', function(event) {
+//         var y = event.changedTouches[0].clientY;
+//         var st = window.scrollTo(); //滚动条高度  //滚动条高度  
+//         if (y >= lastY && st <= 10) {//如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。
+//             lastY = y;
+//             event.preventDefault();
+//         }
+//         lastY = y;
+//  
+//     });
+// }
+
+
 starshoot();
 
-// document.onload=function () {
-//     function stopScrolling(event){
-//         event.preventDefault();
-//     }
-//     document.addEventListener("touchmove",stopScrolling,false);
-// };
 
 var fast = false;
 var arrowbox = document.querySelector(".arrowbox");
@@ -208,7 +204,7 @@ function boxshow() {
     //创建场景
     var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 10000);
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
     camera.position.set(800, 200, 800);
     camera.lookAt({ x: 0, y: 0, z: 0 });
     scene.add(camera);
