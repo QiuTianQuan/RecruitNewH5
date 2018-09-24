@@ -1,5 +1,5 @@
 html{
-    overscroll-behavior-y: contain;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -26,6 +26,9 @@ body {
     background-image: url(../imgs/bgimg.jpg);
     position: absolute;
     top: 0;
+
+
+
 }
 
 .senseOne,
@@ -1042,7 +1045,7 @@ img {
 .star5 {
     position: absolute;
     top: 10vw;
-    left: 65vw;
+    left: 35vw;
     width: 6vw;
     animation: rotateY 4s linear;
     -moz-animation: rotateY 4s linear;

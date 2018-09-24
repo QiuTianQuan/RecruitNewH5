@@ -12,84 +12,84 @@ starshoot();
 
 
 var fast = false;
-var arrowbox = document.querySelector(".arrowbox");
-var mask = document.querySelector(".mask");
-var arrowpoa = 100;
-arrowbox.addEventListener('touchstart', function() {
-    arrowbox.style.display = "none";
-    setInterval(function() {
-        if (arrowpoa >= 1) {
-            mask.style.opacity = arrowpoa / 100;
-            arrowpoa--;
-            if (arrowpoa == 1) {
-                document.querySelector(".senseOne").removeChild(mask);
-                document.querySelector(".wordbox").style.display = "block";
-                zhiwenshow();
-            }
-        }
-    }, 20);
-});
-var zhiwen = document.querySelector(".zhiwen");
-var timer = null;
-var zhiwenopa = 20;
+// var arrowbox = document.querySelector(".arrowbox");
+// var mask = document.querySelector(".mask");
+// var arrowpoa = 100;
+// arrowbox.addEventListener('touchstart', function() {
+//     arrowbox.style.display = "none";
+//     setInterval(function() {
+//         if (arrowpoa >= 1) {
+//             mask.style.opacity = arrowpoa / 100;
+//             arrowpoa--;
+//             if (arrowpoa == 1) {
+//                 document.querySelector(".senseOne").removeChild(mask);
+//                 document.querySelector(".wordbox").style.display = "block";
+//                 zhiwenshow();
+//             }
+//         }
+//     }, 20);
+// });
+// var zhiwen = document.querySelector(".zhiwen");
+// var timer = null;
+// var zhiwenopa = 20;
 
-function zhiwenshow() {
-    setTimeout(function() {
-        document.querySelector(".hand").style.display = "block";
-        document.querySelector(".scanbox").style.display = "block";
-    }, 5500);
-}
-zhiwen.addEventListener('touchstart', function() {
-    document.querySelector(".scanbox").classList.remove("boxs");
-    document.querySelector(".scan").style.display = "block";
-    document.querySelector(".hand").className = "hand" + " " + 'movehand';
-    plus();
+// function zhiwenshow() {
+//     setTimeout(function() {
+//         document.querySelector(".hand").style.display = "block";
+//         document.querySelector(".scanbox").style.display = "block";
+//     }, 5500);
+// }
+// zhiwen.addEventListener('touchstart', function() {
+//     document.querySelector(".scanbox").classList.remove("boxs");
+//     document.querySelector(".scan").style.display = "block";
+//     document.querySelector(".hand").className = "hand" + " " + 'movehand';
+//     plus();
 
-});
+// });
 
-function plus() {
-    setInterval(function() {
-        if (zhiwenopa <= 100) {
-            zhiwen.style.opacity = zhiwenopa / 100;
-            zhiwenopa++;
-            if (zhiwenopa == 100) {
-                document.querySelector(".senseOne").style.display = "none";
-                document.querySelector(".senseTwo").style.display = "block";
-                logleave();
-                tosblack();
-                tosence3();
-            }
-        }
-    }, 50);
-}
+// function plus() {
+//     setInterval(function() {
+//         if (zhiwenopa <= 100) {
+//             zhiwen.style.opacity = zhiwenopa / 100;
+//             zhiwenopa++;
+//             if (zhiwenopa == 100) {
+//                 document.querySelector(".senseOne").style.display = "none";
+//                 document.querySelector(".senseTwo").style.display = "block";
+//                 logleave();
+//                 tosblack();
+//                 tosence3();
+//             }
+//         }
+//     }, 50);
+// }
 
-function logleave() {
-    setTimeout(function() {
-        document.querySelector(".mask2").style.display = "none";
-        document.querySelector(".depart").style.display = "none";
-        fast = true;
-        document.querySelector(".people").className = "people" + " " + 'bigpeople';
-    }, 13000);
-}
+// function logleave() {
+//     setTimeout(function() {
+//         document.querySelector(".mask2").style.display = "none";
+//         document.querySelector(".depart").style.display = "none";
+//         fast = true;
+//         document.querySelector(".people").className = "people" + " " + 'bigpeople';
+//     }, 13000);
+// }
 
-function tosblack() {
-    setTimeout(function() {
-        document.querySelector(".black").style.display = "block";
-        document.querySelector("main").removeChild(document.querySelector(".star"));
-    }, 14000);
-}
+// function tosblack() {
+//     setTimeout(function() {
+//         document.querySelector(".black").style.display = "block";
+//         document.querySelector("main").removeChild(document.querySelector(".star"));
+//     }, 14000);
+// }
 
-function tosence3() {
-    setTimeout(function() {
-        document.querySelector(".sensethree").style.display = "block";
-        document.querySelector(".senseTwo").style.display = "none";
-        boxshow();
-    }, 14500);
-}
+// function tosence3() {
+//     setTimeout(function() {
+//         document.querySelector(".sensethree").style.display = "block";
+//         document.querySelector(".senseTwo").style.display = "none";
+//         boxshow();
+//     }, 14500);
+// }
 
-// document.querySelector(".sensethree").style.display = "block";
-//         document.querySelector(".senseOne").style.display = "none";
-//  boxshow();
+document.querySelector(".sensethree").style.display = "block";
+        document.querySelector(".senseOne").style.display = "none";
+ boxshow();
 
 //three.js
 function starshoot() {
@@ -189,7 +189,7 @@ function boxshow() {
     //创建场景
     var scene = new THREE.Scene();
 
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
+    var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 10000);
     camera.position.set(800, 200, 800);
     camera.lookAt({ x: 0, y: 0, z: 0 });
     scene.add(camera);
@@ -241,10 +241,10 @@ function boxshow() {
     geometry.faces = faces;
     geometry.computeFaceNormals();
     var texture = THREE.ImageUtils.loadTexture('./imgs/box.png');
-    // var maxAnisotropy = renderer.getMaxAnisotropy();
-    // texture.anisotropy = maxAnisotropy;
-    // texture.magFilter = THREE.NearestFilter
-    // texture.minFilter = THREE.NearestFilter
+    var maxAnisotropy = renderer.getMaxAnisotropy();
+    texture.anisotropy = maxAnisotropy;
+    texture.magFilter = THREE.NearestFilter
+    texture.minFilter = THREE.NearestFilter
     var material = new THREE.MeshPhongMaterial({ map: texture });
 
 
