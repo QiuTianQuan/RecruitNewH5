@@ -12,23 +12,31 @@ starshoot();
 
 
 var fast = false;
-var arrowbox = document.querySelector(".arrowbox");
+// var arrowbox = document.querySelector(".arrowbox");
 var mask = document.querySelector(".mask");
-var arrowpoa = 100;
-arrowbox.addEventListener('touchstart', function() {
-    arrowbox.style.display = "none";
-    setInterval(function() {
-        if (arrowpoa >= 1) {
-            mask.style.opacity = arrowpoa / 100;
-            arrowpoa--;
-            if (arrowpoa == 1) {
-                document.querySelector(".senseOne").removeChild(mask);
-                document.querySelector(".wordbox").style.display = "block";
-                zhiwenshow();
-            }
-        }
-    }, 20);
-});
+// var arrowpoa = 100;
+// arrowbox.addEventListener('touchstart', function() {
+//     arrowbox.style.display = "none";
+//     setInterval(function() {
+//         if (arrowpoa >= 1) {
+//             mask.style.opacity = arrowpoa / 100;
+//             arrowpoa--;
+//             if (arrowpoa == 1) {
+//                 document.querySelector(".senseOne").removeChild(mask);
+//                 document.querySelector(".wordbox").style.display = "block";
+//                 zhiwenshow();
+//             }
+//         }
+//     }, 20);
+// });
+setTimeout(function() {
+    mask.style.display = "block";
+}, 3000);
+setTimeout(function() {
+    document.querySelector(".wordbox").style.display = "block";
+    zhiwenshow();
+}, 3800);
+
 var zhiwen = document.querySelector(".zhiwen");
 var timer = null;
 var zhiwenopa = 20;
@@ -177,8 +185,8 @@ function boxshow() {
 
     var windowHalfX = window.innerWidth / 2;
     var windowHalfY = window.innerHeight / 2;
-    var renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer = new THREE.WebGLRenderer({alpha: true});
+    var renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -199,24 +207,24 @@ function boxshow() {
 
     var R1 = 370;
     var R2 = 400;
-    var cos18 = Math.cos(0.017453293 *18);
-    var sin18 = Math.sin(0.017453293 *18);
-    var sin36 = Math.sin(0.017453293 *36);
-    var cos36 = Math.cos(0.017453293 *36);
-    console.log(R1*cos18)
+    var cos18 = Math.cos(0.017453293 * 18);
+    var sin18 = Math.sin(0.017453293 * 18);
+    var sin36 = Math.sin(0.017453293 * 36);
+    var cos36 = Math.cos(0.017453293 * 36);
+    console.log(R1 * cos18)
 
     var vertices = [
         new THREE.Vector3(0, 650, -R1),
-        new THREE.Vector3(-R1*cos18, 650, -R1*sin18),
-        new THREE.Vector3(-R1*sin36, 650, R1*cos36),
-        new THREE.Vector3(R1*sin36, 650, R1*cos36),
-        new THREE.Vector3(R1*cos18, 650, -R1*sin18),
+        new THREE.Vector3(-R1 * cos18, 650, -R1 * sin18),
+        new THREE.Vector3(-R1 * sin36, 650, R1 * cos36),
+        new THREE.Vector3(R1 * sin36, 650, R1 * cos36),
+        new THREE.Vector3(R1 * cos18, 650, -R1 * sin18),
 
         new THREE.Vector3(0, 0, -R2),
-        new THREE.Vector3(-R2*cos18, 0, -R2*sin18),
-        new THREE.Vector3(-R2*sin36, 0, R2*cos36),
-        new THREE.Vector3(R2*sin36, 0, R2*cos36),
-        new THREE.Vector3(R2*cos18, 0, -R2*sin18),
+        new THREE.Vector3(-R2 * cos18, 0, -R2 * sin18),
+        new THREE.Vector3(-R2 * sin36, 0, R2 * cos36),
+        new THREE.Vector3(R2 * sin36, 0, R2 * cos36),
+        new THREE.Vector3(R2 * cos18, 0, -R2 * sin18),
     ];
 
     var faces = [
@@ -348,7 +356,7 @@ function boxshow() {
 
         mouseX = event.clientX - windowHalfX;
 
-        targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown)  * 0.02;
+        targetRotation = targetRotationOnMouseDown + (mouseX - mouseXOnMouseDown) * 0.02;
 
     }
 
@@ -417,4 +425,3 @@ function boxshow() {
     threeStart();
 
 }
-
