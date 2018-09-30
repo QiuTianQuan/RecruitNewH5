@@ -20,7 +20,7 @@
 <body>
     <main>
         <div class="senseOne">
-            <video id="video" autoplay  muted playsinline -webkit-playsinline="true" type="video/mp4" src="imgs/bg.mp4"></video>
+            <video id="video" preload="auto" autoplay muted playsinline -webkit-playsinline="true" type="video/mp4" src="imgs/bg.mp4"></video>
             <div class="wordbox">
                 <div class="words">
                     <div class="word word1">
@@ -118,10 +118,13 @@
     <script src="js/OrbitControls.js"></script>
     <script src="js/index.js"></script>
     <script type="text/javascript">
-        document.getElementById('video').play();
-    document.addEventListener("WeixinJSBridgeReady", function() { 
-        document.getElementById('video').play(); 
+    var video = document.getElementById('video')
+    video.play();
+    document.addEventListener("WeixinJSBridgeReady", function() {
+        video.play();
     }, false);
+    video.setAttribute('src', "imgs/bg.mp4");
+    video.load();
     </script>
 </body>
 
