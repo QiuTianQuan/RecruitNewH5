@@ -7,25 +7,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript">
-        new Image().src = "imgs/bgimg.jpg";
-        new Image().src = "imgs/bg2.png";
-        new Image().src = "imgs/wordbox.png";
-        new Image().src = "imgs/bg3.jpg";
-        new Image().src = "imgs/mask2.png";
-        new Image().src = "imgs/box.png";
-        new Image().src = "imgs/bgimg2.jpg";
-        new Image().src = "imgs/last.png";
-        new Image().src = "imgs/bg.gif";
+    new Image().src = "imgs/bgimg.jpg";
+    new Image().src = "imgs/bg2.png";
+    new Image().src = "imgs/wordbox.png";
+    new Image().src = "imgs/bg3.jpg";
+    new Image().src = "imgs/mask2.png";
+    new Image().src = "imgs/box.png";
+    new Image().src = "imgs/bgimg2.jpg";
     </script>
 </head>
 
 <body>
     <main>
         <div class="senseOne">
-            <!-- <div class="arrowbox">
-                <img class="arrow" src="imgs/arrow.png">
-            </div> -->
-            <div class="mask"></div>
+            <video id="video" autoplay  muted playsinline -webkit-playsinline="true" type="video/mp4" src="imgs/bg.mp4"></video>
             <div class="wordbox">
                 <div class="words">
                     <div class="word word1">
@@ -105,35 +100,29 @@
             <div class="star4">
                 <img src="imgs/star4.png">
             </div>
-             <div class="star5">
+            <div class="star5">
                 <img src="imgs/star2.png">
             </div>
         </div>
         <div class="star"></div>
     </main>
     <script id="vertexShader" type="x-shader/x-vertex">
-        // Uniforms uniform float time; 
-        varying vec3 vNormal; 
-        void main(void) { 
-            vec3 v = position; 
-            vNormal = normal; 
-            v.z += cos(2.0 * position.x + (time)) * 4085.5; 
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(v, 1.0); 
-        }
+        // Uniforms uniform float time; varying vec3 vNormal; void main(void) { vec3 v = position; vNormal = normal; v.z += cos(2.0 * position.x + (time)) * 4085.5; gl_Position = projectionMatrix * modelViewMatrix * vec4(v, 1.0); }
     </script>
     <script id="fragmentShader" type="x-shader/x-fragment">
-        varying vec3 vNormal; uniform float time; void main(void) { 
-            vec3 light = vec3(0.1, .9, .1); 
-            light = normalize(light); 
-            float dProd = max(0.2, dot(vNormal, light)); 
-            gl_FragColor = vec4(dProd, 
-            // R dProd, // G dProd, // B 1.0); // A
-         }
+        varying vec3 vNormal; uniform float time; void main(void) { vec3 light = vec3(0.1, .9, .1); light = normalize(light); float dProd = max(0.2, dot(vNormal, light)); gl_FragColor = vec4(dProd, // R dProd, // G dProd, // B 1.0); // A }
     </script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="js/three.min.js"></script>
     <script src="https://threejs.org/examples/js/utils/SceneUtils.js"></script>
-<script src="js/OrbitControls.js"></script>
+    <script src="js/OrbitControls.js"></script>
     <script src="js/index.js"></script>
+    <script type="text/javascript">
+        document.getElementById('video').play();
+    document.addEventListener("WeixinJSBridgeReady", function() { 
+        document.getElementById('video').play(); 
+    }, false);
+    </script>
 </body>
 
 </html>

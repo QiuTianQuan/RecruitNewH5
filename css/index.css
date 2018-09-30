@@ -2,6 +2,10 @@ html {
     overscroll-behavior-y: none;
 }
 
+video::-webkit-media-controls{
+        display:none !important;
+    }
+
 body {
     -webkit-touch-callout: none !important;
     margin: 0;
@@ -9,7 +13,7 @@ body {
 }
 
 .star {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -19,12 +23,24 @@ body {
 .star canvas {
     width: 100vw;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .senseOne {
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+video {
+    object-fit: fill;
+    width: 100vw;
+    height: 100vh;
+    display: block;
     position: absolute;
-    background-image: url(../imgs/bg.gif);
     top: 0;
     left: 0;
     z-index: -100;
@@ -226,7 +242,7 @@ img {
     background-size: contain;
     background-repeat: no-repeat;
     height: 25vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
     overflow: hidden;
     display: none;
 }
@@ -586,6 +602,8 @@ img {
 .senseTwo {
     display: none;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
 }
 

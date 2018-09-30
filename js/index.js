@@ -1,33 +1,11 @@
 
-
 starshoot();
 
-
 var fast = false;
-// var arrowbox = document.querySelector(".arrowbox");
-var mask = document.querySelector(".mask");
-// var arrowpoa = 100;
-// arrowbox.addEventListener('touchstart', function() {
-//     arrowbox.style.display = "none";
-//     setInterval(function() {
-//         if (arrowpoa >= 1) {
-//             mask.style.opacity = arrowpoa / 100;
-//             arrowpoa--;
-//             if (arrowpoa == 1) {
-//                 document.querySelector(".senseOne").removeChild(mask);
-//                 document.querySelector(".wordbox").style.display = "block";
-//                 zhiwenshow();
-//             }
-//         }
-//     }, 20);
-// });
-setTimeout(function() {
-    mask.style.display = "block";
-}, 3000);
 setTimeout(function() {
     document.querySelector(".wordbox").style.display = "block";
     zhiwenshow();
-}, 3800);
+}, 4500);
 
 var zhiwen = document.querySelector(".zhiwen");
 var timer = null;
