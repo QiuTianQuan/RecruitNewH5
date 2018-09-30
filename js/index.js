@@ -1,11 +1,3 @@
-new Image().src = "imgs/bgimg.jpg";
-new Image().src = "imgs/bg2.png";
-new Image().src = "imgs/wordbox.png";
-new Image().src = "imgs/bg3.jpg";
-new Image().src = "imgs/mask2.png";
-new Image().src = "imgs/box.png";
-new Image().src = "imgs/bgimg2.jpg";
-
 
 
 starshoot();
