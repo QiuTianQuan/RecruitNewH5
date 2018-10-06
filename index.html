@@ -6,21 +6,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script type="text/javascript">
-    new Image().src = "imgs/bgimg.jpg";
-    new Image().src = "imgs/bg2.png";
-    new Image().src = "imgs/wordbox.png";
-    new Image().src = "imgs/bg3.jpg";
-    new Image().src = "imgs/mask2.png";
-    new Image().src = "imgs/box.png";
-    new Image().src = "imgs/bgimg2.jpg";
-    </script>
 </head>
 
 <body>
     <main>
+        <audio autoplay loop preload id="music" hidden>
+            <source src="imgs/bgmusic.mp3" />
+        </audio>
+        <img class="play" src="imgs/play.png">
+        <img class="stop" src="imgs/stop.png">
+        <div class="lodingppage">
+            <div class="stars">
+                <img src="imgs/stars.png">
+            </div>
+            <div class="ufo">
+                <img src="imgs/ufo.png">
+            </div>
+            <div class="wait">
+                <img src="imgs/waitwords.png">
+                <div class="points">
+                <div class="point1"></div>
+                <div class="point2"></div>
+                <div class="point3"></div>
+                <div class="point4"></div>
+                <div class="point5"></div>
+                <div class="point6"></div>
+                </div>
+            </div>
+            <div class="start">
+                <img class="startto" src="imgs/startto.png">
+            </div>
+        </div>
         <div class="senseOne">
-            <video id="video" preload="auto" autoplay muted playsinline -webkit-playsinline="true" type="video/mp4" src="imgs/bg.mp4"></video>
+            <video id="video" preload="auto" autoplay muted preload="auto" webkit-playsinline playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5"  x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill"type="video/mp4" src="imgs/bg.mp4"></video>
             <div class="wordbox">
                 <div class="words">
                     <div class="word word1">
@@ -94,6 +112,11 @@
         </div>
         <div class="sensethree">
             <div class="departbox"></div>
+            <div class="joinus">
+                <a href="https://wx.redrock.team/aboutus/mobile/">
+                    <div class="join"></div>
+                </a>
+            </div>
             <div class="star3">
                 <img src="imgs/star3.png">
             </div>
@@ -117,15 +140,6 @@
     <script src="https://threejs.org/examples/js/utils/SceneUtils.js"></script>
     <script src="js/OrbitControls.js"></script>
     <script src="js/index.js"></script>
-    <script type="text/javascript">
-    var video = document.getElementById('video')
-    video.play();
-    document.addEventListener("WeixinJSBridgeReady", function() {
-        video.play();
-    }, false);
-    video.setAttribute('src', "imgs/bg.mp4");
-    video.load();
-    </script>
 </body>
 
 </html>

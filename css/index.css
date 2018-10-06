@@ -12,7 +12,202 @@ body {
     overflow: hidden;
 }
 
+audio {
+    display: none;
+}
+
+.play {
+    display: none;
+    width: 5vw;
+    position: fixed;
+    top: 8vw;
+    left: 88vw;
+    z-index: 99999;
+}
+
+.stop {
+    display: none;
+    width: 5vw;
+    position: fixed;
+    top: 8vw;
+    left: 88vw;
+     z-index: 99999;
+}
+
+.lodingppage {
+    background-image: url(../imgs/bg1.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stars{
+    width: 100vw;
+    text-align: center;
+    margin-top: 40vw;
+    animation: float 1s linear;
+    -moz-animation: float 1s linear;
+    /* Firefox */
+    -webkit-animation: float 1s linear;
+    /* Safari 和 Chrome */
+    -o-animation: float 1s linear;
+    /* Opera */
+    -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.ufo{
+    width: 100vw;
+    text-align: center;
+    margin-top: -10vw;
+    animation: rotateY 1s linear;
+    -moz-animation: rotateY 1s linear;
+    /* Firefox */
+    -webkit-animation: rotateY 1s linear;
+    /* Safari 和 Chrome */
+    -o-animation: rotateY 1s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.wait {
+    margin-top: 8vw;
+    width: 100vw;
+    text-align: center;
+}
+
+.wait img {
+    width: 45%;
+}
+
+.stars img {
+    width: 70vw;
+}
+
+.ufo img {
+    width: 60vw;
+}
+
+.points{
+   width: 45%;
+    margin: 0 auto;
+    margin-top: -3.5vw;
+}
+
+.point1, .point2, .point3, .point4, .point5, .point6{
+    opacity: 0;
+    float: right;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position-y: bottom;
+    background-image: url(../imgs/point.png);
+}
+
+.point6{
+   animation: boxshow 0.5s linear ;
+    -moz-animation: boxshow 0.5s linear ;
+    -webkit-animation: boxshow 0.5s linear ;
+    -o-animation: boxshow 0.5s linear ;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+
+}
+
+.point5{
+   animation: boxshow 0.5s linear 0.5s;
+    -moz-animation: boxshow 0.5s linear 0.5s;
+    -webkit-animation: boxshow 0.5s linear 0.5s;
+    -o-animation: boxshow 0.5s linear 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+
+}
+
+.point4{
+  animation: boxshow 0.5s linear 1s;
+    -moz-animation: boxshow 0.5s linear 1s;
+    -webkit-animation: boxshow 0.5s linear 1s;
+    -o-animation: boxshow 0.5s linear 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.point3{
+   animation: boxshow 0.5s linear 1.5s;
+    -moz-animation: boxshow 0.5s linear 1.5s;
+    -webkit-animation: boxshow 0.5s linear 1.5s;
+    -o-animation: boxshow 0.5s linear 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.point2{
+   animation: boxshow 0.5s linear 2s;
+    -moz-animation: boxshow 0.5s linear 2s;
+    -webkit-animation: boxshow 0.5s linear 2s;
+    -o-animation: boxshow 0.5s linear 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.point1{
+  animation: boxshow 0.5s linear 2.5s;
+    -moz-animation: boxshow 0.5s linear 2.5s;
+    -webkit-animation: boxshow 0.5s linear 2.5s;
+    -o-animation: boxshow 0.5s linear 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.start {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20vw;
+    transform: translate(-10vw, 0);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position-y: bottom;
+    background-image: url(../imgs/start.png);
+    text-align: center;
+    height: 20vw;
+}
+
+.startto {
+   margin-top: 15vw;
+    width: 35%;
+    animation: boxstar 1s;
+    -moz-animation: boxstar 1s;
+    -webkit-animation: boxstar 1s;
+    -o-animation: boxstar 1s;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
 .star {
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -29,7 +224,7 @@ body {
 }
 
 .senseOne {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,7 +247,10 @@ video {
 .mask,
 .mask2,
 .bg2,
-.bigbigpeople {
+.bigbigpeople,
+.joinus,
+.lodingppage
+ {
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -82,20 +280,7 @@ video {
     z-index: 99;
 }
 
-.arrow {
-    width: 20%;
-    height: 35%;
-    margin-left: 5vw;
-    animation: float 1s;
-    -moz-animation: float 1s;
-    /* Firefox */
-    -webkit-animation: float 1s;
-    /* Safari 和 Chrome */
-    -o-animation: float 1s;
-    /* Opera */
-    -webkit-animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
+
 
 @keyframes float
 /* Safari 和 Chrome */
@@ -105,7 +290,7 @@ video {
         transform: translate(0, 0);
     }
     to {
-        transform: translate(0, 6vw);
+        transform: translate(0, 8vw);
     }
 }
 
@@ -117,7 +302,7 @@ video {
         -webkit-transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(0, 6vw);
+        -webkit-transform: translate(0, 8vw);
     }
 }
 
@@ -129,7 +314,7 @@ video {
         -moz-transform: translate(0, 0);
     }
     to {
-        -moz-transform: translate(0, 6vw);
+        -moz-transform: translate(0, 8vw);
     }
 }
 
@@ -141,7 +326,7 @@ video {
         -o-transform: translate(0, 0);
     }
     to {
-        -o-transform: translate(0, 6vw);
+        -o-transform: translate(0, 8vw);
     }
 }
 
@@ -327,6 +512,9 @@ img {
     -webkit-animation: upto 1s linear 1s;
     -o-animation: upto 1s linear 1s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word2 {
@@ -336,6 +524,9 @@ img {
     -webkit-animation: upto 1s linear 1.5s;
     -o-animation: upto 1s linear 1.5s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word3 {
@@ -345,6 +536,9 @@ img {
     -webkit-animation: upto 1s linear 2s;
     -o-animation: upto 1s linear 2s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word4 {
@@ -354,6 +548,9 @@ img {
     -webkit-animation: upto 1s linear 2.5s;
     -o-animation: upto 1s linear 2.5s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word5 {
@@ -363,6 +560,9 @@ img {
     -webkit-animation: upto 1s linear 3s;
     -o-animation: upto 1s linear 3s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word6 {
@@ -372,6 +572,9 @@ img {
     -webkit-animation: upto 1s linear 3.5s;
     -o-animation: upto 1s linear 3.5s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word7 {
@@ -381,6 +584,9 @@ img {
     -webkit-animation: upto 1s linear 4s;
     -o-animation: upto 1s linear 4s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .word8 {
@@ -390,6 +596,9 @@ img {
     -webkit-animation: upto 1s linear 4.5s;
     -o-animation: upto 1s linear 4.5s;
     -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 
@@ -906,7 +1115,7 @@ img {
         transform: translate(0, 0);
     }
     to {
-        transform: translate(0, 5vw);
+        transform: translate(0, 4vw);
     }
 }
 
@@ -915,7 +1124,7 @@ img {
         -webkit-transform: translate(0, 0);
     }
     to {
-        -webkit-transform: translate(0, 5vw);
+        -webkit-transform: translate(0, 4vw);
     }
 }
 
@@ -927,7 +1136,7 @@ img {
         -moz-transform: translate(0, 0);
     }
     to {
-        -moz-transform: translate(0, 5vw);
+        -moz-transform: translate(0, 4vw);
     }
 }
 
@@ -939,7 +1148,7 @@ img {
         -o-transform: translate(0, 0);
     }
     to {
-        -o-transform: translate(0, 5vw);
+        -o-transform: translate(0, 4vw);
     }
 }
 
@@ -1094,6 +1303,21 @@ img {
 }
 
 .departbox {
-    z-index: 999;
+    z-index: 666;
     position: absolute;
+}
+
+.joinus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/joinus.png);
+    z-index: 999;
+}
+
+.join {
+    margin: 0 auto;
+    margin-top: 100vw;
+    width: 40vw;
+    height: 20vw;
 }
