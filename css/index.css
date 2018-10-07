@@ -108,10 +108,10 @@ audio {
 }
 
 .point6{
-   animation: boxshow 0.5s linear ;
-    -moz-animation: boxshow 0.5s linear ;
-    -webkit-animation: boxshow 0.5s linear ;
-    -o-animation: boxshow 0.5s linear ;
+   animation: boxshow 0.5s linear 1s;
+    -moz-animation: boxshow 0.5s linear 1s;
+    -webkit-animation: boxshow 0.5s linear 1s;
+    -o-animation: boxshow 0.5s linear 1s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
@@ -120,40 +120,6 @@ audio {
 }
 
 .point5{
-   animation: boxshow 0.5s linear 0.5s;
-    -moz-animation: boxshow 0.5s linear 0.5s;
-    -webkit-animation: boxshow 0.5s linear 0.5s;
-    -o-animation: boxshow 0.5s linear 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-
-}
-
-.point4{
-  animation: boxshow 0.5s linear 1s;
-    -moz-animation: boxshow 0.5s linear 1s;
-    -webkit-animation: boxshow 0.5s linear 1s;
-    -o-animation: boxshow 0.5s linear 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-}
-
-.point3{
-   animation: boxshow 0.5s linear 1.5s;
-    -moz-animation: boxshow 0.5s linear 1.5s;
-    -webkit-animation: boxshow 0.5s linear 1.5s;
-    -o-animation: boxshow 0.5s linear 1.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-}
-
-.point2{
    animation: boxshow 0.5s linear 2s;
     -moz-animation: boxshow 0.5s linear 2s;
     -webkit-animation: boxshow 0.5s linear 2s;
@@ -162,13 +128,47 @@ audio {
     animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
+
+}
+
+.point4{
+  animation: boxshow 0.5s linear 3s;
+    -moz-animation: boxshow 0.5s linear 3s;
+    -webkit-animation: boxshow 0.5s linear 3s;
+    -o-animation: boxshow 0.5s linear 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.point3{
+   animation: boxshow 0.5s linear 4s;
+    -moz-animation: boxshow 0.5s linear 4s;
+    -webkit-animation: boxshow 0.5s linear 4s;
+    -o-animation: boxshow 0.5s linear 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.point2{
+   animation: boxshow 0.5s linear 5s;
+    -moz-animation: boxshow 0.5s linear 5s;
+    -webkit-animation: boxshow 0.5s linear 5s;
+    -o-animation: boxshow 0.5s linear 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
 }
 
 .point1{
-  animation: boxshow 0.5s linear 2.5s;
-    -moz-animation: boxshow 0.5s linear 2.5s;
-    -webkit-animation: boxshow 0.5s linear 2.5s;
-    -o-animation: boxshow 0.5s linear 2.5s;
+  animation: boxshow 0.5s linear 6s;
+    -moz-animation: boxshow 0.5s linear 6s;
+    -webkit-animation: boxshow 0.5s linear 6s;
+    -o-animation: boxshow 0.5s linear 6s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
@@ -817,7 +817,7 @@ img {
 }
 
 .bg2 {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-image: url(../imgs/bg2.png);
@@ -1242,6 +1242,7 @@ img {
     top: 0;
     left: 0;
     background-image: url(../imgs/bg3.jpg);
+
 }
 
 .black {
@@ -1307,17 +1308,42 @@ img {
     position: absolute;
 }
 
-.joinus {
+.more {
+    top: 90vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url(../imgs/joinus.png);
+    width: 100%;
     z-index: 999;
 }
 
-.join {
-    margin: 0 auto;
-    margin-top: 100vw;
-    width: 40vw;
-    height: 20vw;
+.findmore , .joinus {
+    display: inline-block;
+    width: 28vw;
+}
+
+.joinus {
+    float: left;
+    margin-left: 5vw;
+}
+
+.findmore {
+    float: right;
+    margin-right: 5vw;
+}
+
+.findmore img {
+    width: 100%;
+}
+
+.joinus img {
+    width: 100%;
+}
+
+.xiaochengxu {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../imgs/xiaochengxu.jpg) center center;
+    background-size: contain;
 }

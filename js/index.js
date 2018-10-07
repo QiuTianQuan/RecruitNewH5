@@ -13,7 +13,8 @@
      "imgs/bg3.jpg",
      "imgs/mask2.png",
      "imgs/box.png",
-     "imgs/bg1.png",
+     "imgs/bg1.jpg",
+     "imgs/xiaochengxu.jpg",
      "imgs/ufo.png",
      "imgs/bgimg2.jpg"
  )
@@ -36,7 +37,11 @@
 
  setTimeout(function() {
      document.querySelector(".start").style.display = "block";
- }, 2000);
+ }, 6000);
+
+document.querySelector(".joinus").addEventListener('touchstart', function() {
+    document.querySelector(".xiaochengxu").style.display = "block";
+ });
 
  play.addEventListener('touchstart', function() {
      play.style.display = "none";
@@ -57,7 +62,7 @@
      setTimeout(function() {
          document.querySelector(".wordbox").style.display = "block";
          zhiwenshow();
-     }, 3800);
+     }, 4800);
      document.querySelector(".lodingppage").style.display = "none";
      document.querySelector(".senseOne").style.display = "block";
      document.querySelector(".star").style.display = "block";
