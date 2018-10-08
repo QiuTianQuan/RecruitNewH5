@@ -127,7 +127,7 @@ document.querySelector(".findmore").addEventListener('touchstart', function() {
      setTimeout(function() {
          document.querySelector(".black").style.display = "block";
          document.querySelector("main").removeChild(document.querySelector(".star"));
-     }, 14500);
+     }, 14100);
  }
 
  function tosence3() {
@@ -135,7 +135,7 @@ document.querySelector(".findmore").addEventListener('touchstart', function() {
          document.querySelector(".sensethree").style.display = "block";
          document.querySelector(".senseTwo").style.display = "none";
          boxshow();
-     }, 14600);
+     }, 14300);
  }
 
  // document.querySelector(".sensethree").style.display = "block";

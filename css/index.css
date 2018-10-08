@@ -20,7 +20,7 @@ audio {
 .play {
     width: 5vw;
     position: fixed;
-    top: 8vw;
+    top: 10vw;
     left: 88vw;
     z-index: 99999;
     animation: rotate 4s linear;
@@ -64,7 +64,7 @@ audio {
     display: none;
     width: 5vw;
     position: fixed;
-    top: 8vw;
+    top: 10vw;
     left: 88vw;
     z-index: 99999;
     animation: rotate 4s linear;
@@ -155,34 +155,49 @@ audio {
     width: 100vw;
     text-align: center;
     margin-top: -10vw;
-    animation: ufofloat 1s linear;
-    -moz-animation: ufofloat 1s linear;
+    animation: ufofloat 4s linear;
+    -moz-animation: ufofloat 4s linear;
     /* Firefox */
-    -webkit-animation: ufofloat 1s linear;
+    -webkit-animation: ufofloat 4s linear;
     /* Safari 和 Chrome */
-    -o-animation: ufofloat 1s linear;
+    -o-animation: ufofloat 4s linear;
     /* Opera */
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
 }
 
+
 @keyframes ufofloat {
-    from {
-        transform: translate(2vw, 0);
+    0% {
+        transform: translate(-2vw, 2vw);
     }
 
-    to {
-        transform: translate(0, 4vw);
+    25% {
+        transform: translate(2vw, 2vw);
+    }
+
+    50% {
+        transform: translate(2vw, -2vw);
+    }
+
+    100% {
+        transform: translate(-2vw, 2vw);
     }
 }
 
 @-webkit-keyframes ufofloat {
-    from {
-        -webkit-transform: translate(2vw, 0);
+    0% {
+        -webkit-transform: translate(-2vw, 2vw);
+    }
+    25% {
+        transform: translate(2vw, 2vw);
     }
 
-    to {
-        -webkit-transform: translate(0, 4vw);
+    50% {
+        -webkit-transform: translate(2vw, -2vw);
+    }
+    100% {
+        -webkit-transform: translate(-2vw, 2vw);
     }
 }
 
@@ -190,12 +205,16 @@ audio {
 /* Safari 和 Chrome */
 
     {
-    from {
+   0% {
         -moz-transform: translate(2vw, 0);
     }
 
-    to {
+    50% {
         -moz-transform: translate(0, 4vw);
+    }
+
+    100% {
+        -moz-transform: translate(2vw, 2vw);
     }
 }
 
@@ -203,11 +222,11 @@ audio {
 /* Safari 和 Chrome */
 
     {
-    from {
+    0% {
         -o-transform: translate(2vw, 0);
     }
 
-    to {
+    50% {
         -o-transform: translate(0, 4vw);
     }
 }
@@ -1214,12 +1233,12 @@ img {
 }
 
 .bigpeople {
-    animation: tobig 1s linear;
-    -moz-animation: tobig 1s linear;
+    animation: tobig 0.7s linear;
+    -moz-animation: tobig 0.7s linear;
     /* Firefox */
-    -webkit-animation: tobig 1s linear;
+    -webkit-animation: tobig 0.7s linear;
     /* Safari 和 Chrome */
-    -o-animation: tobig 1s linear;
+    -o-animation: tobig 0.7s linear;
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -1618,6 +1637,6 @@ img {
     display: none;
     position: fixed;
     left: 10vw;
-    top: 10vw;
+    top: 9vw;
     width: 8vw;
 }
