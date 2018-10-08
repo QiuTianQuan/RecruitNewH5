@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>招贤纳士</title>
+    <title>红岩网校工作站招新啦</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <link rel="preload" href="imgs/bg.mp4">
@@ -175,6 +175,31 @@ function browserRedirect() {
 }
 browserRedirect();
 </script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://wx.idsbllp.cn/wx-api/share.js"></script>
+    <script>
+    WXSHARE.config({ debug: false });
+    WXSHARE.ready(function() {
+        var option = {
+            title: "红岩网校工作站招新啦",
+            link: "http://hongyan.cqupt.edu.cn/RecruitNewH5/",
+            imgUrl: '',
+            desc: '',
+            type: '',
+            success: function() {
+                console.log('分享成功');
+            },
+            cancel: function() {
+                console.log('取消分享');
+            },
+        };
+        wx.onMenuShareTimeline(option);
+        wx.onMenuShareAppMessage(option);
+        wx.onMenuShareQQ(option);
+        wx.onMenuShareWeibo(option);
+        wx.onMenuShareQZone(option);
+    });
+    </script>
 
 </body>
 
