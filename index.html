@@ -13,8 +13,10 @@
 <body>
     <main>
         <div class="pc">
-            这是pc端
-        <div class="pcimg"></div>
+        <div class="pcimg">
+            <img src="imgs/erweima.png">
+            <p>请用手机扫一扫</p>
+        </div>
         </div>
         <div class="yidong">
         <audio autoplay loop preload id="music" hidden>
@@ -129,6 +131,7 @@
                 <div class="xiaochengxu">
                     <img src="imgs/xiaochengxu.jpg">
                 </div>
+                <img class="backto" src="imgs/backto.png">
             </div>
             <div class="star3">
                 <img src="imgs/star3.png">
@@ -166,8 +169,8 @@ function browserRedirect() {
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-        // document.querySelector(".pc").style.display = "block";
-        // document.querySelector(".yidong").style.display = "none";
+        document.querySelector(".pc").style.display = "block";
+        document.querySelector(".yidong").style.display = "none";
     } 
 }
 browserRedirect();

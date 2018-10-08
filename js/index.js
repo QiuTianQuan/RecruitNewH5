@@ -40,7 +40,13 @@
  }, 7000);
 
 document.querySelector(".joinus").addEventListener('touchstart', function() {
+     document.querySelector(".backto").style.display = "block";
     document.querySelector(".xiaochengxu").style.display = "block";
+ });
+
+document.querySelector(".backto").addEventListener('touchstart', function() {
+    document.querySelector(".xiaochengxu").style.display = "none";
+    document.querySelector(".backto").style.display = "none";
  });
 
 document.querySelector(".findmore").addEventListener('touchstart', function() {
@@ -114,14 +120,14 @@ document.querySelector(".findmore").addEventListener('touchstart', function() {
          document.querySelector(".depart").style.display = "none";
          fast = true;
          document.querySelector(".people").className = "people" + " " + 'bigpeople';
-     }, 13000);
+     }, 13500);
  }
 
  function tosblack() {
      setTimeout(function() {
          document.querySelector(".black").style.display = "block";
          document.querySelector("main").removeChild(document.querySelector(".star"));
-     }, 13500);
+     }, 14500);
  }
 
  function tosence3() {
@@ -129,7 +135,7 @@ document.querySelector(".findmore").addEventListener('touchstart', function() {
          document.querySelector(".sensethree").style.display = "block";
          document.querySelector(".senseTwo").style.display = "none";
          boxshow();
-     }, 13600);
+     }, 14600);
  }
 
  // document.querySelector(".sensethree").style.display = "block";
@@ -177,7 +183,7 @@ document.querySelector(".findmore").addEventListener('touchstart', function() {
          geometry.vertices.push(vertex);
      }
 
-     var material = new THREE.ParticleBasicMaterial({ color:0x3b13ff,size: 150 });
+     var material = new THREE.ParticleBasicMaterial({ color:0x1f35db,size: 150 });
      var particles = new THREE.ParticleSystem(geometry, material);
 
      scene.add(particles);
