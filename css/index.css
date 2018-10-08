@@ -2,9 +2,9 @@ html {
     overscroll-behavior-y: none;
 }
 
-video::-webkit-media-controls{
-        display:none !important;
-    }
+video::-webkit-media-controls {
+    display: none !important;
+}
 
 body {
     -webkit-touch-callout: none !important;
@@ -23,6 +23,18 @@ audio {
     top: 8vw;
     left: 88vw;
     z-index: 99999;
+    animation: rotate 4s linear;
+    -moz-animation: rotate 4s linear;
+    /* Firefox */
+    -webkit-animation: rotate 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: rotate 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+}
+
+.pc {
+    display: none;
 }
 
 .stop {
@@ -31,7 +43,15 @@ audio {
     position: fixed;
     top: 8vw;
     left: 88vw;
-     z-index: 99999;
+    z-index: 99999;
+    animation: rotate 4s linear;
+    -moz-animation: rotate 4s linear;
+    /* Firefox */
+    -webkit-animation: rotate 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: rotate 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
 }
 
 .lodingppage {
@@ -41,34 +61,132 @@ audio {
     left: 0;
 }
 
-.stars{
+.stars {
     width: 100vw;
     text-align: center;
     margin-top: 40vw;
-    animation: float 1s linear;
-    -moz-animation: float 1s linear;
+    animation: starsfloat 1s linear;
+    -moz-animation: starsfloat 1s linear;
     /* Firefox */
-    -webkit-animation: float 1s linear;
+    -webkit-animation: starsfloat 1s linear;
     /* Safari 和 Chrome */
-    -o-animation: float 1s linear;
+    -o-animation: starsfloat 1s linear;
     /* Opera */
     -webkit-animation-direction: alternate;
     animation-iteration-count: infinite;
 }
 
-.ufo{
+@keyframes starsfloat
+/* Safari 和 Chrome */
+
+    {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes starsfloat
+/* Safari 和 Chrome */
+
+    {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes starsfloat
+/* Safari 和 Chrome */
+
+    {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes starsfloat
+/* Safari 和 Chrome */
+
+    {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.ufo {
     width: 100vw;
     text-align: center;
     margin-top: -10vw;
-    animation: rotateY 1s linear;
-    -moz-animation: rotateY 1s linear;
+    animation: ufofloat 1s linear;
+    -moz-animation: ufofloat 1s linear;
     /* Firefox */
-    -webkit-animation: rotateY 1s linear;
+    -webkit-animation: ufofloat 1s linear;
     /* Safari 和 Chrome */
-    -o-animation: rotateY 1s linear;
+    -o-animation: ufofloat 1s linear;
     /* Opera */
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
+}
+
+@keyframes ufofloat {
+    from {
+        transform: translate(2vw, 0);
+    }
+
+    to {
+        transform: translate(0, 4vw);
+    }
+}
+
+@-webkit-keyframes ufofloat {
+    from {
+        -webkit-transform: translate(2vw, 0);
+    }
+
+    to {
+        -webkit-transform: translate(0, 4vw);
+    }
+}
+
+@-moz-keyframes ufofloat
+/* Safari 和 Chrome */
+
+    {
+    from {
+        -moz-transform: translate(2vw, 0);
+    }
+
+    to {
+        -moz-transform: translate(0, 4vw);
+    }
+}
+
+@-o-keyframes ufofloat
+/* Safari 和 Chrome */
+
+    {
+    from {
+        -o-transform: translate(2vw, 0);
+    }
+
+    to {
+        -o-transform: translate(0, 4vw);
+    }
 }
 
 .wait {
@@ -89,13 +207,18 @@ audio {
     width: 60vw;
 }
 
-.points{
-   width: 45%;
+.points {
+    width: 45%;
     margin: 0 auto;
     margin-top: -3.5vw;
 }
 
-.point1, .point2, .point3, .point4, .point5, .point6{
+.point1,
+.point2,
+.point3,
+.point4,
+.point5,
+.point6 {
     opacity: 0;
     float: right;
     width: 1.5vw;
@@ -107,20 +230,8 @@ audio {
     background-image: url(../imgs/point.png);
 }
 
-.point6{
-   animation: boxshow 0.5s linear 1s;
-    -moz-animation: boxshow 0.5s linear 1s;
-    -webkit-animation: boxshow 0.5s linear 1s;
-    -o-animation: boxshow 0.5s linear 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-
-}
-
-.point5{
-   animation: boxshow 0.5s linear 2s;
+.point6 {
+    animation: boxshow 0.5s linear 2s;
     -moz-animation: boxshow 0.5s linear 2s;
     -webkit-animation: boxshow 0.5s linear 2s;
     -o-animation: boxshow 0.5s linear 2s;
@@ -131,8 +242,8 @@ audio {
 
 }
 
-.point4{
-  animation: boxshow 0.5s linear 3s;
+.point5 {
+    animation: boxshow 0.5s linear 3s;
     -moz-animation: boxshow 0.5s linear 3s;
     -webkit-animation: boxshow 0.5s linear 3s;
     -o-animation: boxshow 0.5s linear 3s;
@@ -140,10 +251,11 @@ audio {
     animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
+
 }
 
-.point3{
-   animation: boxshow 0.5s linear 4s;
+.point4 {
+    animation: boxshow 0.5s linear 4s;
     -moz-animation: boxshow 0.5s linear 4s;
     -webkit-animation: boxshow 0.5s linear 4s;
     -o-animation: boxshow 0.5s linear 4s;
@@ -153,8 +265,8 @@ audio {
     -o-animation-fill-mode: forwards;
 }
 
-.point2{
-   animation: boxshow 0.5s linear 5s;
+.point3 {
+    animation: boxshow 0.5s linear 5s;
     -moz-animation: boxshow 0.5s linear 5s;
     -webkit-animation: boxshow 0.5s linear 5s;
     -o-animation: boxshow 0.5s linear 5s;
@@ -164,11 +276,22 @@ audio {
     -o-animation-fill-mode: forwards;
 }
 
-.point1{
-  animation: boxshow 0.5s linear 6s;
+.point2 {
+    animation: boxshow 0.5s linear 6s;
     -moz-animation: boxshow 0.5s linear 6s;
     -webkit-animation: boxshow 0.5s linear 6s;
     -o-animation: boxshow 0.5s linear 6s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+
+.point1 {
+    animation: boxshow 0.5s linear 7s;
+    -moz-animation: boxshow 0.5s linear 7s;
+    -webkit-animation: boxshow 0.5s linear 7s;
+    -o-animation: boxshow 0.5s linear 7s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
@@ -192,12 +315,12 @@ audio {
 }
 
 .startto {
-   margin-top: 15vw;
+    margin-top: 15vw;
     width: 35%;
-    animation: boxstar 1s;
-    -moz-animation: boxstar 1s;
-    -webkit-animation: boxstar 1s;
-    -o-animation: boxstar 1s;
+    animation: float 1s;
+    -moz-animation: float 1s;
+    -webkit-animation: float 1s;
+    -o-animation: float 1s;
     animation-direction: alternate;
     -webkit-animation-direction: alternate;
     -moz-animation-direction: alternate;
@@ -213,6 +336,9 @@ audio {
     height: 100vh;
     overflow: hidden;
     z-index: -555;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .star canvas {
@@ -221,6 +347,7 @@ audio {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
 }
 
 .senseOne {
@@ -248,9 +375,7 @@ video {
 .mask2,
 .bg2,
 .bigbigpeople,
-.joinus,
-.lodingppage
- {
+.lodingppage {
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -285,48 +410,52 @@ video {
 @keyframes float
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         transform: translate(0, 0);
     }
+
     to {
-        transform: translate(0, 8vw);
+        transform: translate(0, -3vw);
     }
 }
 
 @-webkit-keyframes float
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
-        -webkit-transform: translate(0, 8vw);
+        -webkit-transform: translate(0, -3vw);
     }
 }
 
 @-moz-keyframes float
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -moz-transform: translate(0, 0);
     }
+
     to {
-        -moz-transform: translate(0, 8vw);
+        -moz-transform: translate(0, -3vw);
     }
 }
 
 @-o-keyframes float
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -o-transform: translate(0, 0);
     }
+
     to {
-        -o-transform: translate(0, 8vw);
+        -o-transform: translate(0, -3vw);
     }
 }
 
@@ -359,10 +488,11 @@ img {
 @keyframes boxshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -371,10 +501,11 @@ img {
 @-webkit-keyframes boxshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -383,10 +514,11 @@ img {
 @-moz-keyframes boxshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -395,10 +527,11 @@ img {
 @-o-keyframes boxshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -410,7 +543,7 @@ img {
 }
 
 .word {
-    pointer-events:none;
+    pointer-events: none;
     width: 70%;
     margin: 0 auto;
     margin-top: 1.2vh;
@@ -447,10 +580,11 @@ img {
 @keyframes boxstar
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -459,10 +593,11 @@ img {
 @-webkit-keyframes boxstar
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -471,10 +606,11 @@ img {
 @-moz-keyframes boxstar
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -483,10 +619,11 @@ img {
 @-o-keyframes boxstar
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -605,11 +742,12 @@ img {
 @keyframes upto
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         transform: translate(0, 0);
         opacity: 0;
     }
+
     to {
         transform: translate(0, -2vh);
         opacity: 1;
@@ -619,11 +757,12 @@ img {
 @-webkit-keyframes upto
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
         opacity: 0;
     }
+
     to {
         -webkit-transform: translate(0, -2vh);
         opacity: 1;
@@ -633,11 +772,12 @@ img {
 @-moz-keyframes upto
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -moz-transform: translate(0, 0);
         opacity: 0;
     }
+
     to {
         -moz-transform: translate(0, -2vh);
         opacity: 1;
@@ -647,11 +787,12 @@ img {
 @-o-keyframes upto
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -o-transform: translate(0, 0);
         opacity: 0;
     }
+
     to {
         -o-transform: translate(0, -2vh);
         opacity: 1;
@@ -696,11 +837,12 @@ img {
 @keyframes scanshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         transform: translate(0, 0);
         opacity: 0.5;
     }
+
     to {
         -webkit-transform: translate(0, -20vw);
         opacity: 1;
@@ -710,11 +852,12 @@ img {
 @-webkit-keyframes scanshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         transform: translate(0, 0);
         opacity: 0.5;
     }
+
     to {
         transform: translate(0, -20vw);
         opacity: 1;
@@ -724,11 +867,12 @@ img {
 @-o-keyframes scanshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -o-transform: translate(0, 0);
         opacity: 0.5;
     }
+
     to {
         -o-transform: translate(0, -20vw);
         opacity: 1;
@@ -738,11 +882,12 @@ img {
 @-moz-keyframes scanshow
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -moz-transform: translate(0, 0);
         opacity: 0.5;
     }
+
     to {
         -moz-transform: translate(0, -20vw);
         opacity: 1;
@@ -763,48 +908,52 @@ img {
 @-webkit-keyframes handmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
-        -webkit-transform: translate(-13.5vw, -12vw);
+        -webkit-transform: translate(-17vw, -7vw);
     }
 }
 
 @-webkit-keyframes handmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
-        -webkit-transform: translate(-13.5vw, -12vw);
+        -webkit-transform: translate(-17vw, -7vw);
     }
 }
 
 @-webkit-keyframes handmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
-        -webkit-transform: translate(-13.5vw, -12vw);
+        -webkit-transform: translate(-17vw, -7vw);
     }
 }
 
 @-webkit-keyframes handmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
-        -webkit-transform: translate(-13.5vw, -12vw);
+        -webkit-transform: translate(-17vw, -7vw);
     }
 }
 
@@ -824,7 +973,7 @@ img {
 }
 
 .depart {
-    pointer-events:none;
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -864,10 +1013,11 @@ img {
 @-webkit-keyframes rotate
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: rotate(0deg);
     }
+
     to {
         -webkit-transform: rotate(360deg);
     }
@@ -944,6 +1094,7 @@ img {
     0% {
         opacity: 0;
     }
+
     30% {
         opacity: 1;
     }
@@ -951,6 +1102,7 @@ img {
     70% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -960,6 +1112,7 @@ img {
     0% {
         opacity: 0;
     }
+
     30% {
         opacity: 1;
     }
@@ -967,6 +1120,7 @@ img {
     70% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -976,6 +1130,7 @@ img {
     0% {
         opacity: 0;
     }
+
     30% {
         opacity: 1;
     }
@@ -983,6 +1138,7 @@ img {
     70% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -992,6 +1148,7 @@ img {
     0% {
         opacity: 0;
     }
+
     30% {
         opacity: 1;
     }
@@ -999,6 +1156,7 @@ img {
     70% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -1033,60 +1191,64 @@ img {
 }
 
 .bigpeople {
-    animation: tobig 1s linear;
-    -moz-animation: tobig 1s linear;
+    animation: tobig 0.5s linear;
+    -moz-animation: tobig 0.5s linear;
     /* Firefox */
-    -webkit-animation: tobig 1s linear;
+    -webkit-animation: tobig 0.5s linear;
     /* Safari 和 Chrome */
-    -o-animation: tobig 1s linear;
+    -o-animation: tobig 0.5s linear;
     -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes tobig
 /* Safari 和 Chrome */
 
-{
+    {
     0% {
         transform: scale(0, 0);
     }
+
     100% {
-        transform: scale(3, 3);
+        transform: scale(6, 6);
     }
 }
 
 @-webkit-keyframes tobig
 /* Safari 和 Chrome */
 
-{
+    {
     0% {
         -webkit-transform: scale(0, 0);
     }
+
     100% {
-        -webkit-transform: scale(3, 3);
+        -webkit-transform: scale(6, 6);
     }
 }
 
 @-moz-keyframes tobig
 /* Safari 和 Chrome */
 
-{
+    {
     0% {
         -moz-transform: scale(0, 0);
     }
+
     100% {
-        -moz-transform: scale(3, 3);
+        -moz-transform: scale(6, 6);
     }
 }
 
 @-o-keyframes tobig
 /* Safari 和 Chrome */
 
-{
+    {
     0% {
         -o-transform: scale(0, 0);
     }
+
     100% {
-        -o-transform: scale(3, 3);
+        -o-transform: scale(6, 6);
     }
 }
 
@@ -1114,6 +1276,7 @@ img {
     from {
         transform: translate(0, 0);
     }
+
     to {
         transform: translate(0, 4vw);
     }
@@ -1123,6 +1286,7 @@ img {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
         -webkit-transform: translate(0, 4vw);
     }
@@ -1131,10 +1295,11 @@ img {
 @-moz-keyframes rotateY
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -moz-transform: translate(0, 0);
     }
+
     to {
         -moz-transform: translate(0, 4vw);
     }
@@ -1143,10 +1308,11 @@ img {
 @-o-keyframes rotateY
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -o-transform: translate(0, 0);
     }
+
     to {
         -o-transform: translate(0, 4vw);
     }
@@ -1171,10 +1337,11 @@ img {
 @keyframes starmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         transform: translate(0, 0);
     }
+
     to {
         transform: translate(5vw, 5vw);
     }
@@ -1183,10 +1350,11 @@ img {
 @-webkit-keyframes starmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -webkit-transform: translate(0, 0);
     }
+
     to {
         -webkit-transform: translate(5vw, 5vw);
     }
@@ -1195,10 +1363,11 @@ img {
 @-moz-keyframes starmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -moz-transform: translate(0, 0);
     }
+
     to {
         -moz-transform: translate(5vw, 5vw);
     }
@@ -1207,10 +1376,11 @@ img {
 @-o-keyframes starmove
 /* Safari 和 Chrome */
 
-{
+    {
     from {
         -o-transform: translate(0, 0);
     }
+
     to {
         -o-transform: translate(5vw, 5vw);
     }
@@ -1246,7 +1416,7 @@ img {
 }
 
 .black {
-    background-color: black;
+    background-color: #151a3d;
     width: 100vw;
     height: 100vh;
     display: none;
@@ -1309,25 +1479,96 @@ img {
 }
 
 .more {
-    top: 90vh;
+    bottom: 4vh;
     position: fixed;
     width: 100%;
     z-index: 999;
 }
 
-.findmore , .joinus {
+.findmore,
+.joinus {
     display: inline-block;
     width: 28vw;
 }
 
-.joinus {
+.findmore {
     float: left;
     margin-left: 5vw;
+     animation: morebig 4s linear;
+    -moz-animation: morebig 4s linear;
+    /* Firefox */
+    -webkit-animation: morebig 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: morebig 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
 }
 
-.findmore {
-    float: right;
-    margin-right: 5vw;
+.joinus {
+    position: absolute;
+    right: 5vw;
+     animation: morebig 4s linear;
+    -moz-animation: morebig 4s linear;
+    /* Firefox */
+    -webkit-animation: morebig 4s linear;
+    /* Safari 和 Chrome */
+    -o-animation: morebig 4s linear;
+    /* Opera */
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+@keyframes morebig
+/* Safari 和 Chrome */
+
+    {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0.9, 0.9);
+    }
+}
+
+@-webkit-keyframes morebig
+/* Safari 和 Chrome */
+
+    {
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9, 0.9);
+    }
+}
+
+@-moz-keyframes morebig
+/* Safari 和 Chrome */
+
+    {
+    0% {
+        -moz-transform: scale(1, 1);
+    }
+
+    100% {
+        -moz-transform: scale(0.9, 0.9);
+    }
+}
+
+@-o-keyframes morebig
+/* Safari 和 Chrome */
+
+    {
+    0% {
+        -o-transform: scale(1, 1);
+    }
+
+    100% {
+        -o-transform: scale(0.9, 0.9);
+    }
 }
 
 .findmore img {
@@ -1344,6 +1585,8 @@ img {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../imgs/xiaochengxu.jpg) center center;
-    background-size: contain;
+}
+
+.xiaochengxu img {
+    width: 100%;
 }

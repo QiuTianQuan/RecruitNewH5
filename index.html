@@ -12,6 +12,11 @@
 
 <body>
     <main>
+        <div class="pc">
+            这是pc端
+        <div class="pcimg"></div>
+        </div>
+        <div class="yidong">
         <audio autoplay loop preload id="music" hidden>
             <source src="imgs/bgmusic.mp3" />
         </audio>
@@ -83,9 +88,9 @@
             <div class="star2">
                 <img src="imgs/star2.png">
             </div>
-            <div class="people">
-                <img src="imgs/people.png">
-            </div>
+            <!-- <div class="people"> -->
+                <img class="people" src="imgs/people.png">
+            <!-- </div> -->
             <div class="mask2"></div>
             <div class="depart">
                 <div class="cricle">
@@ -115,13 +120,15 @@
         <div class="sensethree">
             <div class="departbox"></div>
             <div class="more">
-                <div class="findmore"><a href="https://wx.redrock.team/aboutus/mobile/"> 
+                <div class="findmore">
                     <img src="imgs/findmore.png">
-                </a></div>
+                </div>
                 <div class="joinus">
                     <img src="imgs/joinus.png">
                 </div>
-                <div class="xiaochengxu"></div>
+                <div class="xiaochengxu">
+                    <img src="imgs/xiaochengxu.jpg">
+                </div>
             </div>
             <div class="star3">
                 <img src="imgs/star3.png">
@@ -134,6 +141,7 @@
             </div>
         </div>
         <div class="star"></div>
+        </div>
     </main>
     <script id="vertexShader" type="x-shader/x-vertex">
         // Uniforms uniform float time; varying vec3 vNormal; void main(void) { vec3 v = position; vNormal = normal; v.z += cos(2.0 * position.x + (time)) * 4085.5; gl_Position = projectionMatrix * modelViewMatrix * vec4(v, 1.0); }
@@ -146,6 +154,25 @@
     <script src="https://threejs.org/examples/js/utils/SceneUtils.js"></script>
     <script src="js/OrbitControls.js"></script>
     <script src="js/index.js"></script>
+<script>
+function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+        // document.querySelector(".pc").style.display = "block";
+        // document.querySelector(".yidong").style.display = "none";
+    } 
+}
+browserRedirect();
+</script>
+
 </body>
 
 </html>

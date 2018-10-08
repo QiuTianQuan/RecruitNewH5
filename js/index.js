@@ -37,10 +37,14 @@
 
  setTimeout(function() {
      document.querySelector(".start").style.display = "block";
- }, 6000);
+ }, 7000);
 
 document.querySelector(".joinus").addEventListener('touchstart', function() {
     document.querySelector(".xiaochengxu").style.display = "block";
+ });
+
+document.querySelector(".findmore").addEventListener('touchstart', function() {
+    window.location.href= "https://wx.redrock.team/aboutus/mobile/";
  });
 
  play.addEventListener('touchstart', function() {
@@ -117,7 +121,7 @@ document.querySelector(".joinus").addEventListener('touchstart', function() {
      setTimeout(function() {
          document.querySelector(".black").style.display = "block";
          document.querySelector("main").removeChild(document.querySelector(".star"));
-     }, 14000);
+     }, 13500);
  }
 
  function tosence3() {
@@ -125,7 +129,7 @@ document.querySelector(".joinus").addEventListener('touchstart', function() {
          document.querySelector(".sensethree").style.display = "block";
          document.querySelector(".senseTwo").style.display = "none";
          boxshow();
-     }, 14500);
+     }, 13600);
  }
 
  // document.querySelector(".sensethree").style.display = "block";
@@ -163,7 +167,7 @@ document.querySelector(".joinus").addEventListener('touchstart', function() {
      });
 
 
-     var geometry = new THREE.Geometry();
+     var geometry = new THREE.CircleGeometry();
 
      for (i = 0; i < totalObjects; i++) {
          var vertex = new THREE.Vector3();
@@ -173,7 +177,7 @@ document.querySelector(".joinus").addEventListener('touchstart', function() {
          geometry.vertices.push(vertex);
      }
 
-     var material = new THREE.ParticleBasicMaterial({ size: 150 });
+     var material = new THREE.ParticleBasicMaterial({ color:0x3b13ff,size: 150 });
      var particles = new THREE.ParticleSystem(geometry, material);
 
      scene.add(particles);
@@ -345,7 +349,7 @@ document.querySelector(".joinus").addEventListener('touchstart', function() {
 
      mesh = new THREE.Mesh(geometry, material);
      mesh.material.transparent = true;
-     mesh.position.y = -140;
+     mesh.position.y = -180;
      mesh.position.x = 20;
 
      scene.add(mesh);
