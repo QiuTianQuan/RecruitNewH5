@@ -190,7 +190,7 @@ audio {
         -webkit-transform: translate(-2vw, 2vw);
     }
     25% {
-        transform: translate(2vw, 2vw);
+        -webkit-transform: translate(2vw, 2vw);
     }
 
     50% {
@@ -205,16 +205,18 @@ audio {
 /* Safari 和 Chrome */
 
     {
-   0% {
-        -moz-transform: translate(2vw, 0);
+    0% {
+        -moz-transform: translate(-2vw, 2vw);
+    }
+    25% {
+        -moz-transform: translate(2vw, 2vw);
     }
 
     50% {
-        -moz-transform: translate(0, 4vw);
+        -moz-transform: translate(2vw, -2vw);
     }
-
     100% {
-        -moz-transform: translate(2vw, 2vw);
+        -moz-transform: translate(-2vw, 2vw);
     }
 }
 
@@ -222,12 +224,18 @@ audio {
 /* Safari 和 Chrome */
 
     {
-    0% {
-        -o-transform: translate(2vw, 0);
+     0% {
+        -o-transform: translate(-2vw, 2vw);
+    }
+    25% {
+        -o-transform: translate(2vw, 2vw);
     }
 
     50% {
-        -o-transform: translate(0, 4vw);
+        -o-transform: translate(2vw, -2vw);
+    }
+    100% {
+        -o-transform: translate(-2vw, 2vw);
     }
 }
 
