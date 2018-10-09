@@ -20,7 +20,7 @@ audio {
 .play {
     width: 5vw;
     position: fixed;
-    top: 10vw;
+    top: 8vw;
     left: 88vw;
     z-index: 99999;
     animation: rotate 4s linear;
@@ -41,8 +41,8 @@ audio {
 }
 
 .pcimg {
-    width: 300px;
-    height: 300px;
+    width: 375px;
+    height: 667px;
     position: absolute;
     left: 0;
     right: 0;
@@ -55,10 +55,7 @@ audio {
 .pcimg img {
     width: 100%;
 }
-.pcimg p {
-    font-size: 25px;
-    color: white;
-}
+
 
 .stop {
     display: none;
@@ -1578,7 +1575,7 @@ img {
     }
 
     100% {
-        transform: scale(0.95, 0.95);
+        transform: scale(0.9, 0.9);
     }
 }
 
@@ -1591,7 +1588,7 @@ img {
     }
 
     100% {
-        -webkit-transform: scale(0.95, 0.95);
+        -webkit-transform: scale(0.9, 0.9);
     }
 }
 
@@ -1645,6 +1642,6 @@ img {
     display: none;
     position: fixed;
     left: 10vw;
-    top: 9vw;
+    top: 7vw;
     width: 8vw;
 }
